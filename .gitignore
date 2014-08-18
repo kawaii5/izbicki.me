@@ -1,0 +1,11 @@
+_*
+*.hi
+*.ho
+*.o
+site
+
+*.swp
+*.swo
+
+img-raw
+drafts

@@ -1,0 +1,94 @@
+---
+title: izbicki.me
+---
+
+<div style="border-bottom: solid 0px silver; overflow: hidden; margin-bottom: 10px">
+    <div style="-moz-border-radius: 10px; -webkit-border-radius: 10px; -khtml-border-radius: 10px; border-radius: 20px; overflow: hidden; float:right; margin:10px 5px 5px 10px; padding:0px; box-shadow: 3px 3px 3px #4d4d4d;">
+        <img src="https://avatars1.githubusercontent.com/u/1052630?v=2&s=460" width=200 style="float:right; "/>
+        </div>
+        <h1>hello world!</h1>
+        <!--<h1 style="margin-bottom:0px; padding-bottom:0px; font-family:monospace; color:white; background:black; text-align:left; text-weight:normal; font-size:14px;">-->
+        <!--</h1>-->
+        <!--<-->
+        <!--&nbsp;$$ echo hello world<br\>-->
+        <!--&nbsp;$$ whoami-->
+        <!--</h1>-->
+
+    <!--<div style="padding-right:10px;">-->
+    <!--<br/>-->
+        My name is Mike Izbicki.  
+        I'm a phd student and lecturer in the CS department at UC Riverside.
+        In a past life I was a naval officer, but I left as a <a href="/blog/my-co-discharge.html">conscientious objector</a>.
+        <!--I like writing about haskell, machine learning, homemade beer, and various religious topics.-->
+        I like writing about programming, religion, and homemade beer.
+        You can contact me at <a href=mailto:mike@izbicki.me>mike@izbicki.me</a> for just about anything.
+        <!--I like writing about haskell, machine learning, and various religious topics.-->
+        <!--</div>-->
+</div>
+
+<h2>recent posts</h2>
+<ul class=postlist>
+$for(recentPosts)$
+<li>
+<table class=posttable>
+    <tr>
+        <td valign=top><span class=date>($date$)</span></td>
+        <td valign=top> - </td>
+        <td valign=top><a class=post href="$url$">$title$</a> </td>
+    </tr>
+    $if(desc)$
+    <tr>
+        <td></td>
+        <td></td>
+        <td>$desc$</td>
+    </tr>
+    $endif$
+</table>
+</li>
+$endfor$
+</ul>
+
+<br/>
+
+<h2>popular posts</h2>
+<br/>
+<div class=popularpost>
+<!--<a href="/posts/computer-science/how-to-create-an-unfair-coin-and-prove-it-with-math.html">-->
+    <a href="/blog/how-to-create-an-unfair-coin-and-prove-it-with-math.html">
+    <img class=popularpost src="/img/popular/coins-all.jpg"/>
+    <div class=popularposttitle>create an unfair coin and prove it with math</div>
+    </a>
+</div>
+
+<div class=popularpost>
+<!--<a href="/posts/fun/how-i-serve-150-free-lunches-for-less-than-20-cents-each-using-homebrew-equipment.html">-->
+    <a href="/blog/how-i-serve-150-free-lunches-for-less-than-20-cents-each-using-homebrew-equipment.html">
+    <img class=popularpost src="/img/popular/ingredients-2.jpg"/>
+    <div class=popularposttitle>food not bombs</a></div>
+    </a>
+</div>
+
+<div class=popularpost>
+<!--<a href="/posts/fun/turning-an-ak-47-into-a-serving-ladle.html">-->
+    <a href="/blog/turning-an-ak-47-into-a-serving-ladle.html">
+    <img class=popularpost src="/img/popular/ak47-2.jpg"/>
+    <div class=popularposttitle>turning an ak47 into a serving ladle</div>
+    </a>
+</div>
+
+<div class=popularpost>
+<!--<a href="/posts/religion/scrolls.html">-->
+    <a href="/blog/ancient-hebrew-torah-scrolls.html">
+<!--<img class=popularpost src="/img/scroll/vaydaber-1.jpg" /><br/>-->
+<!--<img class=popularpost src="/img/scroll/vaydaber-5.jpg" /><br/>-->
+<img class=popularpost src="/img/scroll/vaydaber-7.jpg" /><br/>
+<!--<img class=popularpost src="/img/scroll/vaydaber-4.jpg" /><br/>-->
+    <div class=popularposttitle>my collection of "ancient" hebrew scrolls</div>
+    </a>
+</div>
+
+<a name=allposts></a>
+<h2>all posts</h2>
+
+$catlist$
+

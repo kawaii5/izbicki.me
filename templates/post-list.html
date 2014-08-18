@@ -1,0 +1,43 @@
+<ul class=postlist>
+$for(posts)$
+<li>
+<table class=posttable>
+    <tr>
+        <td valign=top><span class=date>($date$)</span></td>
+        <td valign=top> - </td>
+        <td valign=top><a class=post href="$url$">$title$</a> </td>
+    </tr>
+</table>
+</li>
+$endfor$
+
+
+$if(posts2)$
+$for(posts2)$
+<li>
+<table class=posttable>
+    <tr>
+        <td valign=top><span class=date>($date$)</span></td>
+        <td valign=top> - </td>
+        <td valign=top><span class=curpost>$title$</span></td>
+    </tr>
+</table>
+</li>
+$endfor$
+$endif$
+
+
+$if(posts3)$
+$for(posts3)$
+<li>
+<table class=posttable>
+    <tr>
+        <td valign=top><span class=date>($date$)</span></td>
+        <td valign=top> - </td>
+        <td valign=top><a class=post href="$url$">$title$</a> </td>
+    </tr>
+</table>
+</li>
+$endfor$
+$endif$
+</ul>

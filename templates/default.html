@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        $if(desc)$
+        <meta name=description content="$metadesc$">
+        $endif$
+        <title>$title$</title>
+        <link rel="stylesheet" type="text/css" href="/css/default.css" />
+        <link rel="stylesheet" type="text/css" href="/css/code.css" />
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-36396447-1', 'auto');
+          ga('require', 'displayfeatures');
+          ga('send', 'pageview');
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <div id="logo">
+                <a href="/">izbicki.me</a>
+            </div>
+            <div id="navigation">
+            <!--<a href="/">Home</a>-->
+            <!--<a href="/about.html">About</a>-->
+            <!--<a href="/contact.html">Contact</a>-->
+            <!--<a href="/archive.html">Archive</a>-->
+            <!--<a href="/category/computer-science/haskell">-->
+            <!--<img width=32px height=32px src="/img/thumbnail/haskell-logo.png" />-->
+            <!--</a>-->
+            <!--<a href="/">-->
+            <!--<img width=32px height=32px src="/img/thumbnail/christian-anarchism.png" />-->
+            <!--</a>-->
+                <a href="/feed.rss" class=icon id=rss>
+                <!--<img width=32px height=32px src="/img/thumbnail/rss.png" />-->
+                </a>
+                <a href="http://github.com/mikeizbicki" class=icon id=github>&nbsp;
+                <!--<img width=32px height=32px src="/img/thumbnail/github.png" />-->
+                </a>
+            </div>
+            &nbsp;
+        </div>
+
+        <div id="content">
+        <!--$if(noheader)$-->
+        <!--$else$-->
+        <!--<h1>$title$</h1>-->
+        <!--$endif$-->
+
+            $body$
+        </div>
+
+        $if(relatedposts)$
+        <div id="relatedposts">
+        
+        <div>
+        <h2></h2>
+        <b style="font-size:20px">related posts</b>
+        <!--<div><h2>related posts</h2></div>-->
+        <span class=allposts>(<a href="/#allposts">view all posts</a>)</span>
+        </div>
+
+        $catlist$
+
+        <script type="text/javascript">
+        var images=
+            [ { "img":"/img/popular/ingredients-2.jpg"
+              //, "url":"/posts/fun/how-i-serve-150-free-lunches-for-less-than-20-cents-each-using-homebrew-equipment.html" 
+              , "url":"/blog/how-i-serve-150-free-lunches-for-less-than-20-cents-each-using-homebrew-equipment.html" 
+              , "txt":"food not bombs"
+              }
+            , { "img":"/img/scroll/vaydaber-7.jpg"
+              // , "url":"/posts/religion/scrolls.html"
+              , "url":"/blog/ancient-hebrew-torah-scrolls.html"
+              , "txt":"my collection of \"ancient\" hebrew scrolls"
+              }
+            , { "img":"/img/popular/ak47-2.jpg"
+              //, "url":"/posts/fun/turning-an-ak-47-into-a-serving-ladle.html"
+              , "url":"/blog/turning-an-ak-47-into-a-serving-ladle.html"
+              , "txt":"turning an ak47 into a serving ladle"
+              }
+            , { "img":"/img/popular/coins-all.jpg"
+              , "url":"/blog/how-to-create-an-unfair-coin-and-prove-it-with-math.html"
+              //, "url":"/posts/computer-science/how-to-create-an-unfair-coin-and-prove-it-with-math.html"
+              , "txt":"create an unfair coin and prove it with math"
+              }
+            ];
+
+        function mkImage() {
+            var i=Math.floor(Math.random()*(images.length));
+            while (document.URL.indexOf(images[i].url) != -1) {
+                i=Math.floor(Math.random()*(images.length));
+            }
+            var ret="<div id=ppfooter>"
+                   +"<div class=popularpost>"
+                   +    "<a href='"+images[i].url+"'>"
+                   +    "<img class=popularpost src='"+images[i].img+"'/>"
+                   +    "<div class=popularposttitle>"+images[i].txt+"</a></div>"
+                   +    "</a>"
+                   +"</div>"
+                   +"</div>"
+            return ret;
+        }
+
+        document.write(mkImage());
+
+        </script>
+        $endif$
+
+
+        <div id="footer">
+            All content is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">creative commons attribution-sharealike</a>.
+            <br/>
+
+            You can contact me at <a href="mailto:mike@izbicki.me">mike@izbicki.me</a> for just about anything.
+        </div>
+    </body>
+</html>

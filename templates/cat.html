@@ -1,0 +1,32 @@
+<div class=cat2>
+
+<a name="$catname$"></a>
+<div class=catnamedesc>
+<span class=catname>$catname$</span>
+$if(dispclickme)$
+<span class=allposts>(<a href="/#$catname$">view all posts in category</a>)</span>
+$endif$
+
+$if(dispdesc)$
+$if(desc)$ 
+<span class=catdesc>$desc$</span>
+$endif$
+$endif$
+</div>
+
+$if(catinside)$
+<div class=catinside>
+$if(listposts)$
+$partial("templates/post-list.html")$
+$endif$
+
+$if(dispsubcats)$
+$dispsubcats$
+$endif$
+</div>
+$endif$
+
+$if(debug)$
+$debug$
+$endif$
+</div>

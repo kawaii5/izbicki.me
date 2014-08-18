@@ -1,0 +1,54 @@
+---
+title: Miscellaneous files about conscientious objectors
+---
+
+This is a collection of government files I have collected concerning the conscientious objector (CO) process in the United States.  Many of these files are outdated; whatever analysis they provide is probably no longer relevant.  They are probably not of interest to you, unless you are doing some serious historical work.
+
+###Government Accountability Office (GAO) Reports
+	
+  * [GAO-07-1196](http://izbicki.me/public/co/GAO-2007.pdf) (2007) "Number of Formally Reported Applications for Conscientious Objectors is Small Relative to the Total Size of the Armed Forces"
+
+  * [GAO/NSIAD-94-35](http://izbicki.me/public/co/GAO-1993.pdf) (1993) "Conscientious Objectors - Number of Applications Remained Small During the Persian Gulf War"
+
+  * [GAO/NSIAD-98-199](http://izbicki.me/public/co/GAO-women and draft.pdf) (1998) -"Gender Issues - Changes Would be Needed to Expand Selective Service Registration to Women"
+
+###Defense Technical Information Center (DTIC) Publications
+	
+  * ["An Assessment of Health Status Among Medical Research Volunteers who Served in the Project Whitecoat Program at Fort Detrick, Maryland"](http://izbicki.me/public/co/Project Whitecoat - COs used to test bio weapons.pdf) (2005) - 2000 conscientious objectors volunteered to have biological weapons tested on them rather than fight in combat
+
+  * ["Restructuring the In-Service Conscientious Objector Program"](http://izbicki.me/public/co/DTIC-RESTRUCTURING%20THE%20IN-SERVICE%20CONSCIENTIOUS%20OBJECTOR%20PROGRAM.pdf) (1993) - Army JAG argues that in-service CO regulations are too lenient and need to be restricted
+
+  * [Technical Report 70-1](http://izbicki.me/public/co/Development of Combat training course for corpsman conscientious objectors.pdf), and [Appendix](http://izbicki.me/public/co/Development%20of%20Combat%20training%20course%20for%20corpsman%20conscientious%20objectors-appendix.pdf) (1970) - Army manual about training medical corpsmen who are also 1-0-A conscientious objectors
+
+###Department of Defense Regulations
+	
+  * [DODd-1300.06 (1971)](http://izbicki.me/public/co/DODd-1300.06-1971.pdf) - All changes after this date appear to be trivial.  This regulation is a significant deviation from previous regulations, however, which I do not have copies of.
+
+  * [DODd-1300.06 (1975)](http://izbicki.me/public/co/DODd-1971-1300_6.pdf)
+	
+  * [DODi-1300.06 (2007)](http://izbicki.me/public/co/DODi-2007-1300_06.pdf)
+
+###Publications by Military Law Journals (_Army Lawyer_ and _Military Law Review_)
+
+These are full journals, not just the relevant article.  Do a search for "conscientious objector" to find the relevant section.
+	
+  * ["'I Won't Participate in an Illegal War'  - Military Objectors, the Nuremberg Defense, and the Obligation to Refuse Illegal Orders"](http://izbicki.me/public/co/Army%20Lawyer/07-2010.pdf) (2010)
+
+  * ["Reclaiming the In-Service Conscientious Objector Program: Proposals for Creating a Meaningful Limitation to the Claim of Conscientious Objection"](http://izbicki.me/public/co/Army%20Lawyer/08-2008.pdf) (2008)
+	
+  * ["Time to Exorcise Another Ghost from the Vietnam War: Restructuring the In-Service Conscientious Objector Program"](http://izbicki.me/public/co/Military%20Law%20Review/275871%7E1.pdf) (1993)
+
+  * ["Religious Accommodation in the Military"](http://izbicki.me/public/co/Army%20Lawyer/01-1987.pdf) (1987)
+	
+  * ["Religion and the Military: Recent Developments"](http://izbicki.me/public/co/Army%20Lawyer/12-1985.pdf) (1985)
+	
+  * ["Free Exercise of Religion and Selective Conscientious Objection: A Judicial Response to a Moral Problem"](http://izbicki.me/public/co/Army%20Lawyer/06-1980.pdf) (1979)
+
+  * ["Conscientious Objectors and Courts-Martial: Some Recent Developments"](http://izbicki.me/public/co/Army%20Lawyer/09-1971.pdf) (1971)
+
+  * ["Nuclear Weapons: The Crisis of Conscience" ](http://izbicki.me/public/co/Military%20Law%20Review/27786D%7E1.pdf)(1985) - Discusses conscientious objection in relation to nuclear pacifism and denunciation by Catholic Bishops of nuclear weapons
+
+  * ["They Step to a Different Drummer: A Critical Analysis of the Current DOD Regulations vis-a-vis In-Service Conscientious Objectors"](http://izbicki.me/public/co/Military%20Law%20Review/27787B%7E1.pdf) (1970)
+
+  * ["Selective Service Litigation and the 1967 Statute"](http://izbicki.me/public/co/Military%20Law%20Review/275871%7E1.pdf) (1970)
+
