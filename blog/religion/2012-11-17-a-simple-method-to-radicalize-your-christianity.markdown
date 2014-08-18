@@ -1,5 +1,5 @@
 ---
-title: A simple method to radicalize your Christianity.
+title: A simple method to radicalize your Christianity
 ---
 
 

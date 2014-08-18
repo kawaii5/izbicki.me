@@ -4,7 +4,8 @@ title: My collection of "ancient" Hebrew scrolls
 
 In 2006, I saw the [dead sea scrolls](https://en.wikipedia.org/wiki/Dead_Sea_scrolls) in San Diego.  The experience changed my life.  I realized I had no understanding of the Jewish roots of my Christian faith.  So I decided to learn.  I studied Hebrew, and have been putting together my own collection of biblical Hebrew scrolls:
 
-![a pile of *Torah* scrolls](/img/scroll/scrollpile.jpg)
+<!--![a pile of *Torah* scrolls](/img/scroll/scrollpile.jpg)-->
+![a pile of *Torah* scrolls](/img/scroll/scrolls-pile2.jpg)
 
 Each scroll is between 100 to 600 years old, and is a fragment of the *Torah*.  These scrolls were used by synagogues throughout Southern Europe, Africa, and the Middle East.  As we'll see in a bit, each region has subtly different scribal traditions.  But they all take their *Torah* very seriously.
 
