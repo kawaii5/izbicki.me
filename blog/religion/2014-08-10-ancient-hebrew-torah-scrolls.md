@@ -2,7 +2,7 @@
 title: My collection of "ancient" Hebrew scrolls
 ---
 
-In 2006, I saw the [dead sea scrolls](https://en.wikipedia.org/wiki/Dead_Sea_scrolls) in San Diego.  The experience changed my life.  I realized I had no understanding of the Jewish roots of my Christian faith.  So I decided to learn.  I studied Hebrew, and have been putting together my own collection of biblical Hebrew scrolls:
+In 2006, I saw the [dead sea scrolls](https://en.wikipedia.org/wiki/Dead_Sea_scrolls) in San Diego.  The experience changed my life.  I realized I knew nothing about ancient Judea, and decided to immerse myself in it.  I studied biblical Hebrew and began a collection of Hebrew scrolls:
 
 <!--![a pile of *Torah* scrolls](/img/scroll/scrollpile.jpg)-->
 ![a pile of *Torah* scrolls](/img/scroll/scrolls-pile2.jpg)
@@ -106,7 +106,7 @@ Below are nine selected images of *YHWH*.  Each comes from a different scroll an
 
 ![yahweh, jehova, the name of god, in many different Hebrew scripts](/img/scroll/yhwh2.png)
 
-The next image shows the word *YHWH* at the end of the line. The ה letters get stretched just like in any other word. When I first saw this I was surprised a *sopher* would stretch the name of God like this---they take *YHWH* very seriously. I can just imagine rabbis 300 years ago getting into heated debates about whether or not this was *kosher*!
+The next image shows the word *YHWH* at the end of the line. The ה letters get stretched just like in any other word. When I first saw this I was surprised a *sopher* would stretch the name of God like this---the name of God is taken very seriously and must be handled according to special rules. I can just imagine rabbis 300 years ago getting into heated debates about whether or not this was *kosher*!
 
 ![stretched yahweh in Hebrew *Torah* scroll](/img/scroll/yhwh-stretch.jpg)
 
@@ -128,7 +128,7 @@ Names are very important in Hebrew.  Most names are actually phrases.  The name 
 
 ![the name jacob written in fancy Hebrew script; genesis 25:26](/img/scroll/name-jacob.png)
 
-But names often change in the book of Genesis.  In fact, *Jacob*'s name is changed to *Israel* in two separate locations: first in [Genesis 32](http://www.mechon-mamre.org/p/pt/pt0132.htm) after *Jacob* wrestles with "a man"; then again in [Genesis 35](http://www.mechon-mamre.org/p/pt/pt0135.htm) after *Jacob* builds an alter to *elohim*.  The name *Israel* is appropriate because it literally means "persevered with God."  The *el* at the end of *Israel* is a shortened form of *elohim* and is another Hebrew word for god. 
+But names often change in the book of Genesis.  In fact, *Jacob*'s name is changed to *Israel* in two separate locations: first in [Genesis 32](http://www.mechon-mamre.org/p/pt/pt0132.htm) after *Jacob* wrestles with "a man"; then again in [Genesis 35](http://www.mechon-mamre.org/p/pt/pt0135.htm) after *Jacob* builds an alter to *elohim*. (This is one of the stories cited as evidence for the documentary hypothesis.) The name *Israel* is appropriate because it literally means "persevered with God."  The *el* at the end of *Israel* is a shortened form of *elohim* and is another Hebrew word for god. 
 
 Here is the name Israel in two different scripts:
 
@@ -193,11 +193,11 @@ One of the worst things that can happen to a scroll is water.  It damages the pa
 
 ###you should learn Hebrew!
 
-If you've read this far and enjoyed it, then you should learn biblical Hebrew.  It's a lot of fun!  And the process will deepen your faith. You can start the process online right now at any of these great sites:
+If you've read this far and enjoyed it, then you should learn biblical Hebrew.  It's a lot of fun!   You can start right now at any of these great sites:
 
 * [http://foundationstone.com.au](http://foundationstone.com.au/OnlineHebrewTutorial.html) - geared for the Jewish reader, covers both biblical and modern Hebrew
 
-* [http://hebrew4christians.com](http://hebrew4christians.com) - very good site because it also explains lots of Jewish customs that may be unfamiliar to you
+* [http://hebrew4christians.com](http://hebrew4christians.com) - very good site because it also explains lots of Jewish customs that may be unfamiliar to you; this should probably be more accurately named "hebrew4gentiles"
 
 * [http://www.ulpan.net](http://www.ulpan.net/) - the focus is on modern Hebrew, but the basics are the same
 
