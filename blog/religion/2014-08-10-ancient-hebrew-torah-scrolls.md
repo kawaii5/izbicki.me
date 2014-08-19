@@ -1,8 +1,9 @@
 ---
-title: My collection of "ancient" Hebrew scrolls
+title: Scribal traditions of "ancient" Hebrew scrolls
+title-old: My collection of "ancient" Hebrew scrolls
 ---
 
-In 2006, I saw the [dead sea scrolls](https://en.wikipedia.org/wiki/Dead_Sea_scrolls) in San Diego.  The experience changed my life.  I realized I knew nothing about ancient Judea, and decided to immerse myself in it.  I studied biblical Hebrew and began a collection of Hebrew scrolls:
+In 2006, I saw the [dead sea scrolls](https://en.wikipedia.org/wiki/Dead_Sea_scrolls) in San Diego.  The experience changed my life.  I realized I knew nothing about ancient Judea, and decided to immerse myself in it.  I studied biblical Hebrew and began a collection of Hebrew scrolls.
 
 <!--![a pile of *Torah* scrolls](/img/scroll/scrollpile.jpg)-->
 ![a pile of *Torah* scrolls](/img/scroll/scrolls-pile2.jpg)
@@ -82,7 +83,7 @@ The passage below is of [Numbers 10:35-36](https://www.biblegateway.com/passage/
 <!--![Moses gives a command about the ark of the covenant in fancy Hebrew script](/img/scroll/formatting-loneletter.jpg)-->
 ![Moses gives a command about the ark of the covenant in fancy Hebrew script; inverted nun character](/img/scroll/inverted-nun.jpg)
 
-My favorite part of owning multiple scrolls is when they have sections that overlap.  We can compare them side-by-side to watch the development of different scribal traditions.  The image below shows two versions of [Numbers 6:22-27](https://www.biblegateway.com/passage/?search=numbers+6:22-27&version=NIV).  
+It's really cool when two different scrolls have sections that overlap.  We can compare them side-by-side to watch the development of different scribal traditions.  The image below shows two versions of [Numbers 6:22-27](https://www.biblegateway.com/passage/?search=numbers+6:22-27&version=NIV).  
 
 ![The lord bless you and keep you rendered in a Hebrew *Torah* in fancy Hebrew script](/img/scroll/numbers-6.png)
 
