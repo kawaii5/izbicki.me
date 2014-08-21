@@ -1,2 +1,13 @@
 RewriteEngine on
-RewriteRule ^([^.]*)$ $1 [type=text/html]
+
+#RewriteRule ^([^.]*)$ $1 [type=text/html]
+
+RewriteRule /blog/feed /feed.rss
+RewriteRule /feed      /feed.rss
+
+RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{2,4}
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^([^.]*)$ $1.html
+
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
