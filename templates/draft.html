@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        $if(desc)$
+        <meta name=description content="$metadesc$">
+        $endif$
+        <title>$title$</title>
+        <link rel="stylesheet" type="text/css" href="/css/default.css" />
+        <link rel="stylesheet" type="text/css" href="/css/code.css" />
+        <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    </head>
+    <body>
+        <div id="header">
+            <div id="logo">
+                <a href="/">izbicki.me</a>
+            </div>
+            <div id="navigation">
+            <!--<a href="/">Home</a>-->
+            <!--<a href="/about.html">About</a>-->
+            <!--<a href="/contact.html">Contact</a>-->
+            <!--<a href="/archive.html">Archive</a>-->
+            <!--<a href="/category/computer-science/haskell">-->
+            <!--<img width=32px height=32px src="/img/thumbnail/haskell-logo.png" />-->
+            <!--</a>-->
+            <!--<a href="/">-->
+            <!--<img width=32px height=32px src="/img/thumbnail/christian-anarchism.png" />-->
+            <!--</a>-->
+                <a href="/feed.rss" class=icon id=rss>
+                <!--<img width=32px height=32px src="/img/thumbnail/rss.png" />-->
+                </a>
+                <a href="http://github.com/mikeizbicki" class=icon id=github>&nbsp;
+                <!--<img width=32px height=32px src="/img/thumbnail/github.png" />-->
+                </a>
+            </div>
+            &nbsp;
+        </div>
+
+        <div id="content">
+        <!--$if(noheader)$-->
+        <!--$else$-->
+        <!--<h1>$title$</h1>-->
+        <!--$endif$-->
+
+            $body$
+        </div>
+
+        <div id="footer">
+            All content is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">creative commons attribution-sharealike</a>.
+            <br/>
+
+            You can contact me at <a href="mailto:mike@izbicki.me">mike@izbicki.me</a> for just about anything.
+        </div>
+    </body>
+</html>

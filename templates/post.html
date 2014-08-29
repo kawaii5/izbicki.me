@@ -1,6 +1,11 @@
 <h1>$title$</h1>
 <div class="info">
-    posted on $date$
+    $if(date)$
+        posted on $date$
+    $else$
+        posted in the future
+    $endif$
+
     $if(author)$
         by $author$
     $endif$
