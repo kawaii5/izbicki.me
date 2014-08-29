@@ -2,7 +2,7 @@
 
 This is the github repo for my hakyll-based website http://izbicki.me.  
 
-If you are submitting a post, first clone the repo, checkout the `draft` branch, then create a branch just for your post:
+If you are submitting a post, first clone the repo; then checkout the `draft` branch; then create a branch just for your post:
 
 ```
 $ git clone https://github.com/mikeizbicki/izbicki.me
@@ -25,9 +25,9 @@ If you want to include images on the page, copy the image into the `/img` folder
 When finished, upload your results to github:
 
 ```
-git add .
-git commit -m "my post"
-git push origin myposttitle
+$ git add .
+$ git commit -m "my post"
+$ git push origin myposttitle
 ```
 
 Then issue a pull request through the github interface.  When I accept your request, the webpage will be automatically updated.
