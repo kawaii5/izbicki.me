@@ -141,7 +141,7 @@ err->	     << /*in.*/length() << "!" << endl;
   		num <- getLine
 		let size = length num
 err->	putStrLn $ "The size of your word, \"" ++ num ++ "\", is " 
-	++ {-show-} size ++ "!"
+		++ {-show-} size ++ "!"
 ```
 And the error messages:
 
@@ -187,7 +187,8 @@ err->	main = {-do-}
 		putStrLn "Please enter a single word and get the string size back"
   		num <- getLine
 		let size = length num
-		putStrLn $ "The size of your word, \"" ++ num ++ "\", is " ++ show size ++ "!"
+		putStrLn $ "The size of your word, \"" ++ num ++ "\", is "
+				++ show size ++ "!"
 ```
 
 As you can see, in the C++ I forgot include a semicolon and in Haskell I forgot the `do` in main. As a beginner, I've personally made both of these mistakes.
@@ -206,6 +207,7 @@ C++ delivers a clear message explaining how to fix the error. Haskell however, i
 ###Example 5
 Now, for our final comparison, let us see what happens when you call the built-in length functions of C++ and Haskell with no arguments at all.
 
+```
 	/* C++ Code */
 	#include <iostream>
 	#include <cstring>
@@ -217,17 +219,19 @@ Now, for our final comparison, let us see what happens when you call the built-i
 		cout << "Please enter a word" << endl;
 		cin >> input;
 	
-error->		cout << "THe size of your string is: " << (unsigned)strlen();
+err->	cout << "THe size of your string is: " << (unsigned)strlen();
 		cout << "!" << endl;
 		return 0;
 	}
+```
 -----------------------------------------------------------------------
 	{- Haskell Code -}
 	main = do
 		putStrLn "Please enter a word"
 		num <- getLine
-error->		let size = length 
+err->	let size = length 
 		putStrLn $ "The size of your string is: " ++ show size ++ "!"
+```
 	
 Now let us see the different error messages that are produced.
 
