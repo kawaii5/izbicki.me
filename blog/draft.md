@@ -86,7 +86,9 @@ err->	cout << "The size of your string, \"" << in << "\", is " << (unsigned)strl
 		cout << "!" << endl;
 		return 0;
 	}
+```
 -----------------------------------------------------------------------
+```
 	{- Haskell Code -}
 	main = do
 		putStrLn "Please enter a single word to get the string size back"
@@ -138,7 +140,8 @@ err->	     << /*in.*/length() << "!" << endl;
 		putStrLn "Please enter a single word and get the string size back"
   		num <- getLine
 		let size = length num
-err->	putStrLn $ "The size of your word, \"" ++ num ++ "\", is " ++ {-show-} size ++ "!"
+err->	putStrLn $ "The size of your word, \"" ++ num ++ "\", is " 
+	++ {-show-} size ++ "!"
 ```
 And the error messages:
 
@@ -168,7 +171,7 @@ For this next example, I use the same code as above just with new errors.
 	
 	int main() 
 	{
-error->		string in = ""
+err->	string in = ""
 		cout << "Please enter a single word and get the string size back" << endl;
 		cin >> in;
 	
@@ -180,7 +183,7 @@ error->		string in = ""
 -----------------------------------------------------------------------
 ```
 	{- Haskell Code -}
-error->	main = {-do-}
+err->	main = {-do-}
 		putStrLn "Please enter a single word and get the string size back"
   		num <- getLine
 		let size = length num
