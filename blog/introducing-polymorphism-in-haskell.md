@@ -1,4 +1,4 @@
----
+﻿---
 title: Polymorphism in Haskell vs. C++
 author: <a href="//github.com/jduga002">Jonathan Dugan</a>
 ---
@@ -30,7 +30,18 @@ We get this error when we compile with g++:
 
 Compare this error to if, instead of using templates, we used doubles:
 
-[FIXME: add the actual code; it might make sense to start with the simple example like this before talking about templates.]
+    double boxSArea(double length, double width, double height)
+    {
+        return length * width * height;
+    }
+
+    int main()
+    {
+        Cout << boxSArea(“oops”,”no”,”strings”) << endl;
+    }
+
+After compiling with g++, we get this error message:
+
 
     test.cpp: In function _int main()_:
     test.cpp:22:47: error: cannot convert _const char*_ to _double_ for argument _1_ to _double
@@ -132,14 +143,14 @@ This type class declaration says that any data type that is an instance of this 
 
 Replacing our function definitions with these instantiations of the Sequence type class lets our program compile.
 
-Type classes are also an important part of using templates in function definitions.  In our function `boxSArea`, we got an error because we tried to use the `*` operation without declaring the type variable `a` as an instance of the `Num` type class.  The `Num` type class is basically for anything that acts like a number, such as `Int`, `Float`, and `Double`, and it lets you to use the common operations of `+`, `-`, and `*`.  
+Type classes are also an important part of using templates in function definitions.  In our function `boxSArea`, we got an error because we tried to use the `*` operation without declaring the type variable `a` as an instance of the `Num` type class.  The `Num` type class is basically for anything that acts like a number, such as `Int`, `Float`, and `Double`, and it lets you use the common operations of `+`, `-`, and `*`.  
 
 Let’s change our function to declare that `a` is a `Num`:
 
     boxSArea :: (Num a) => a -> a -> a -> a
     boxSArea length width height = length * width * height
 
-This is called adding a class constraint.  Whenever we want to declare a template function that relies on other functions, we have to add a class constrinat that tells both the user and the compiler  which types of data can be put into the function.
+This is called adding a class constraint.  Whenever we want to declare a template function that relies on other functions, we have to add a class constraint that tells both the user and the compiler  which types of data can be put into the function.
 
 If we were to call `boxSArea` on strings, we would get this simple error message:
 
