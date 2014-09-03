@@ -225,6 +225,7 @@ err->	cout << "THe size of your string is: " << (unsigned)strlen();
 	}
 ```
 -----------------------------------------------------------------------
+```
 	{- Haskell Code -}
 	main = do
 		putStrLn "Please enter a word"
