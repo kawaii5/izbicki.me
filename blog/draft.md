@@ -3,7 +3,7 @@ title: Reasons why C++ is easier for beginners than Haskell
 author: <a href="//github.com/mikeizbicki">Paul Satrkey</a>
 ---
 
-## Reasons why C++ is more transparent for the beginning programmer as compared to Haskell 
+## Reasons why C++ is easier for beginners than Haskell 
 
 So let me start off with this disclosure and bit of background: learning Haskell over these past few months has been an excruciating experience and I have only about a years worth of experience programming with C++. I do not know if learning Haskell was difficult for me because C++ is where I feel comfortable programming or if it is because Haskell has a steep learning curve. Either way, my experience with Haskell has been a whirlwind of emotion and turmoil.  In particular, the error messages from the haskell compiler `ghc` were more difficult to understand than the error messages I was used to from `g++`.
 
@@ -16,6 +16,7 @@ Let's see some concrete examples by comparing a few code snippets side by side.
 
 Below are two equivalent C++ and Haskell programs. I've intentionally added some syntax errors:
 
+```
 	/* C++ Code */
 	#include <iostream>
 
@@ -26,7 +27,7 @@ Below are two equivalent C++ and Haskell programs. I've intentionally added some
 		int in = -1;
 		cout << "Please choose 1 for a message" << endl;
 		cin >> in;
-error->		if in == 1 
+err->	if in == 1 
 		{
 			cout << "Hello, World!" << endl;
 		}
@@ -43,8 +44,9 @@ error->		if in == 1
 		if num /= "1"
 			then do
 				putStrLn "Error, wrong choice"
-error->			
+err->		
 				putStrLn "Hello, World"	
+```
 
 Alright, so the first notable difference is that the Haskell code is far more compact. It takes up roughly half the space that the C++ code does yet they both output `hello world` when the correct number is entered. Great! Haskell already seems better, right? Wrong! Notice how I omitted the parentheses in the C++ code for the `if` parameters and the `else` in the Haskell code. Both omissions are simple mistakes that I've made while learning these languages. 
 
@@ -57,11 +59,11 @@ Now let's see the error messages:
 	Compilation failed.
 -----------------------------------------------------------------------
 	
--- Haskell Error --
+	-- Haskell Error --
 	[..]main.hs:19:1:
 		parse error (possibly incorrect indentation or mismatched brackets)
 	Failed, modules loaded: none.
- 
+
 Both error messages let the programmer know where the mistake happened, but the `g++` message is far more helpful. It tells us how to fix the syntax error by adding some missing parentheses. Bam! Problem solved. 
 
 Now let us turn to `ghc`'s output. Okay, something about a parse error use.. might have indentation errors.. and no modules loaded. Cool. Now I've never taken a compiler course, so I'm still left wondering what's wrong with my code. The error message is simply not helpful.
@@ -69,7 +71,7 @@ Now let us turn to `ghc`'s output. Okay, something about a parse error use.. mig
 ### Example 2
 Next, we will look at what happens when you pass too many arguments to functions in both languages:
 
-
+```
 	/* C++ Code */
 	#include <iostream>
 	using namespace std;
@@ -79,7 +81,7 @@ Next, we will look at what happens when you pass too many arguments to functions
 		cout << "Please enter a single word to get the string size back" << endl;
 		cin >> in;
 	
-error->		cout << "The size of your string, \"" << in << "\", is " << (unsigned)strlen(in, in);
+err->	cout << "The size of your string, \"" << in << "\", is " << (unsigned)strlen(in, in);
 		cout << "!" << endl;
 		return 0;
 	}
@@ -88,9 +90,9 @@ error->		cout << "The size of your string, \"" << in << "\", is " << (unsigned)s
 	main = do
 		putStrLn "Please enter a single word to get the string size back"
 		num <- getLine
-error->		let size = length num num
+err->	let size = length num num
 		putStrLn $ "The size of your string, \"" ++ num ++ "\", is " ++ show size ++ "!"
-
+```
 The source of the error in the above code sample is that in both languages the length functions are being passed too many arguments. 
 
 	-- C++ Error --
@@ -111,7 +113,7 @@ As you can see, this time both messages seem to be helpful. The C++ error clearl
 ### Example 3
 For my next example, I give you another pair of syntax errors. The Haskell error personally took me 45 minutes to fix. And that was only after I emailed Mike to basically give me the answer. I had already invested so much energy and time trying to solve this minuscule error on Google to no avail.  
 
-
+```
 	/* C++ Code */ 
 	#include <iostream>
 	
@@ -124,17 +126,19 @@ For my next example, I give you another pair of syntax errors. The Haskell error
 		cin >> in;
 	
 		cout << "The size of your word, \"" << in << "\", is "
-error->		     << /*in.*/length() << "!" << endl;
+err->	     << /*in.*/length() << "!" << endl;
 		return 0;
 	}
+```
 -----------------------------------------------------------------------
+```
 	{- Haskell Code -}
 	main = do
 		putStrLn "Please enter a single word and get the string size back"
   		num <- getLine
 		let size = length num
-error->		putStrLn $ "The size of your word, \"" ++ num ++ "\", is " ++ {-show-} size ++ "!"
- 
+err->	putStrLn $ "The size of your word, \"" ++ num ++ "\", is " ++ {-show-} size ++ "!"
+```
 And the error messages:
 
 	-- C++ Error --
