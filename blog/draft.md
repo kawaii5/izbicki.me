@@ -36,7 +36,9 @@ err->	if in == 1
 		}
 		return 0;
 	}
------------------------------------------------------------------------ 	
+```
+----------------------------------------------------------------------- 
+```
 	{- Haskell Code -}
 	main = do
 		putStrLn "Please enter 1 for a message"
@@ -51,14 +53,13 @@ err->
 Alright, so the first notable difference is that the Haskell code is far more compact. It takes up roughly half the space that the C++ code does yet they both output `hello world` when the correct number is entered. Great! Haskell already seems better, right? Wrong! Notice how I omitted the parentheses in the C++ code for the `if` parameters and the `else` in the Haskell code. Both omissions are simple mistakes that I've made while learning these languages. 
 
 Now let's see the error messages:
-	
+
 	-- C++ Error --
 	main.cpp: In function 'int main()':
 	main.cpp:15:5: error: expected '(' before 'in'
 	main.cpp:19:2: error: 'else' without a previous 'if'
 	Compilation failed.
 -----------------------------------------------------------------------
-	
 	-- Haskell Error --
 	[..]main.hs:19:1:
 		parse error (possibly incorrect indentation or mismatched brackets)
@@ -159,7 +160,7 @@ Now to the Haskell warning. It appears I have another parse error in my code. Th
 ### Example 4
 For this next example, I use the same code as above just with new errors. 
 
-
+```
 	/* C++ Code */ 
 	#include <iostream>
 	
@@ -175,13 +176,16 @@ error->		string in = ""
 		     << in.length() << "!" << endl;
 		return 0;
 	}
+```
 -----------------------------------------------------------------------
+```
 	{- Haskell Code -}
 error->	main = {-do-}
 		putStrLn "Please enter a single word and get the string size back"
   		num <- getLine
 		let size = length num
 		putStrLn $ "The size of your word, \"" ++ num ++ "\", is " ++ show size ++ "!"
+```
 
 As you can see, in the C++ I forgot include a semicolon and in Haskell I forgot the `do` in main. As a beginner, I've personally made both of these mistakes.
 
