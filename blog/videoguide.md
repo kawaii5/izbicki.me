@@ -12,14 +12,11 @@ Learning GitHub
 ---
                
 ####Getting Started
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/RMyqz8jh3Rc" frameborder="0" allowfullscreen></iframe>
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/RMyqz8jh3Rc&ap=%2526fmt%3D22&rel=0" frameborder="0" allowfullscreen></iframe>
 
-In this video, we will show you step by step how to create your first account on GitHub. 
-When I first made my account, I was unsure of what the exact steps were to correctly make my repository. 
-On top of that, I had no idea how to even get something online (eg: github) and clone it to my local machine because this was all new methods for me. 
-I made sure to show you the exact process on the web browser and terminal so you can safely and correctly get your first repository on your local machine.
-
-
+This video shows you step by step how to create an account on GitHub. 
+Then we see how to create our first repository called `test`, and transfer it from github onto our local machine.
+This process is called cloning.
 
 ####Creating a file and Pushing/Pulling with GitHub
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/1Hn0UbiyMb0" frameborder="0" allowfullscreen></iframe>
