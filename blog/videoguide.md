@@ -1,37 +1,33 @@
-##Guide To Getting Started: The Terminal, GitHub, & `vim`
-Learning to use github, `vim`, and the terminal can be very confusing and hard to learn when you are so used to writing, compiling, saving and sharing your code in your own way. Thankfully, we've created a simple video guide to help you reach your potential in most areas of the terminal, github, and `vim` so you can manage your files, create new files, write code, compile it and share it via your profile on github.com. 
-
-Our names are Rashid, Kyler, and Sean, Junior Computer Science Majors at the *University of California, Riverside*. We took CS100 class not knowing how to use or even get started with these topics. Rest assure, we didn't want to let anyone else feel unconfident and pushed back because they weren't sure how to strongly use the terminal, `vim` or github. That's why we've put together a series of video guides to get you started in the right direction towards learning the basics. We hope you enjoy our tutorial, and wish you the best in your coding. 
-
-Click The Images Below To Be Taken To YouTube To Watch
-
-Click **[HERE](https://www.youtube.com/watch?v=RMyqz8jh3Rc&list=PLQ6W7BIxh4zsJgGwZr-cpHCB_EjyY1NFK)** To Watch The Entire Playlist In Order
-
-
-Learning GitHub
 ---
-               
-####Getting Started
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/RMyqz8jh3Rc&ap=%2526fmt%3D22&rel=0" frameborder="0" allowfullscreen></iframe>
+title: Getting started with GitHub, vim, and the terminal
+author: <a href="//github.com/rgosh001">Rashid Goshtasbi</a> and <a href="//github.com/kryne001">Kyler Rynear</a>
+---
+
+Learning to use `git`, `vim`, and `bash` was hard for us.
+These tools are so different than the tools we used when we first learned to program.
+And they're confusing!
+But our professor made us use them... and eventually... after we learned the tools... we discovered that we really like them! 
+So we've put together a simple video guide to help you learn and enjoy these tools too.
+We did this as part of the CS100 open source software development class at UC Riverside. 
+
+##Getting Started with GitHub
+
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/RMyqz8jh3Rc?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 This video shows you step by step how to create an account on GitHub. 
-Then we see how to create our first repository called `test`, and transfer it from github onto our local machine.
-This process is called cloning.
+Then we see how to create our first repository called `test`, and transfer it from GitHub onto our local machine using the `git clone` command.
 
-####Creating a file and Pushing/Pulling with GitHub
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/1Hn0UbiyMb0" frameborder="0" allowfullscreen></iframe>
+###Creating a file, pushing to GitHub, and pulling from GitHub
 
-So now that you've been able to clone you directory from GitHub to your local machine, you may be asking yourself "How do I even make files and put it my GitHub?" 
-I originally learned a few ways to create a file. 
-One way enables you to create the file automatically via the `touch <filename>` command. 
-The `touch <filename>` command will create the file for you even if you specify an extension in the filename (eg: main.ccp will make a file called name in a .cpp format). 
-The second option you could do is via the `vim <filename>` command, which will open up an editor named of a file named after the filename you inputted BUT it will not save the file for you once you create it. 
-You could save the file once the editor opens up or after you edit the file by pressing `:w` (in the respective order) or `:wq` which will save and edit the `vim` editor for you immediately after.
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/1Hn0UbiyMb0?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
+How do we create files and upload them to GitHub?
+The `touch <filename>` command will create an empty file for you.
+The `vim <filename>` command will open a file in an advanced text editor that [we talk about farther down the page](#vim).
+The `git push` command sends these files from your local machine up to GitHub, and the `git pull` command downloads files from GitHub and saves them to your local computer.
 
-
-####Branches
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/E8-hUsR7IXA" frameborder="0" allowfullscreen></iframe>
+###Branches
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/E8-hUsR7IXA?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 We've all been in the position before. You've been coding up a program where most of it's files are ready to be published to the world while some may not.
 Thanks to GitHub, you are able to create branches off of your program that will enable you to work around your bugs and eventually merge the correct fixes to your main program.
@@ -43,49 +39,44 @@ In the end, you completed your program, but safely worked out your bugs without 
 In other terms, this is called version control.
 
 
-####Tags
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/WKG1u4Y_f3s" frameborder="0" allowfullscreen></iframe>
+###Tags
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/WKG1u4Y_f3s?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
-You've learn about `branch` but now we'll show you another feature of `vim` you might recognize in the software world. 
-Recall downloading programs where it shows the different version numbers (For example: 1.0, 1.1, 1.2, 2.1, 2.2.1)? 
-Well, tags enable you to immediately go to and from different times of your work. 
-You might also be thinking how different are tags from branches? 
-Well, tags are different way of accessing different version of your work (just like a checkpoint in a Mario game!). 
-If you're still unsure of how different tags can be, watch the video above as we've demonstrated the uses.
+Most programs have different versions, for example: 1.0, 1.1, 1.2, 2.1 and 2.2.1.
+The `git tag` command let's you create these versions. 
+They're just like a checkpoint in a Mario game!
 
 
-####Forking & Pull Requests
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/tTnL84EvJTM" frameborder="0" allowfullscreen></iframe>
+###Forking & Pull Requests
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/tTnL84EvJTM?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
-For myself, I've always wondered how people contributed to online projects. 
-With GitHub, you can get a copy of someone's repository and modifying it to your liking or even contribute to it if you've found/fixed a bug. 
-For pull requests, you'd only use it if you've found a bug and would like to submit the code you've changes in your copy of the original repository, to the original owner's copy. 
-Although, pull requests are done online at github.com.
+Let's say you want to contribute to an open source project.
+You can `git clone` it like we've already discussed, but you can't run `git push` to add your changes.
+You don't have permission.
+In order to contribute to someone else's repository, you must first "fork" it to create a repo that you do have `push` permission on.
+Then you issue a pull request through the GitHub website.
+This tells the owner of the original repo that you've made some changes they can incorporate.
+This is the basic procedure you follow any time you contribute to an open source project.
 
+###The `README.md` file
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/4UTSEKzsSvM?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
+`README.md` files are how you document your projects.
+The `README.md` should explain your program, give installation instructions, and list known bugs.
+Basically, it explains to someone else who has absolutely no idea what your program does or how to code, but it enables the user to understand the concepts and basic directions to execute your program.
+The `.md` extension at the end of the filename indicates that the file uses markdown formatting.
+This is a simple way to create nice looking documentation.
 
-####The `README.md` file
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/4UTSEKzsSvM" frameborder="0" allowfullscreen></iframe>
+## Learning vim
 
-`README.md` files are going to be the main focus of documenting and explaining to anyone who comes across your document what it does. 
-A `README.md` allows you to explain your program and all its possibilities and defects. 
-You can talk about the contributors, files included, what the program entitles the user to do, how to install it and much more! 
-The easiest way I was told what a `README.md` file does is "it explains to someone else who has absolutely no idea what your program does or how to code, but it enables the user to understand the concepts and basic directions to execute your program."
-
-Watch the video above and let us drive through both of these documents together to help you create a well organized `README.md` file.
-
-
-
-Learning `vim`
----
-`vim` has so many commands that it can be intimidating for first time users.
-They may feel that using a different, more familiar, editor would make coding more efficient.
-It may be difficult to remember what all of these new commands do, but these users may even begin to enjoy using it more than their previous editors if given enough time to practice with `vim`. I'm no master at using `vim` and am still learning new things about it. Overtime, I learned a few tricks that helped me use `vim` to make better code.
-
-
+`vim` is an advanced text editor for Unix operating systems.
+It's powerful, but all the commands are intimidating for first time users.
+At first, you'll think that using a more familiar editor would make coding more efficient.
+But these videos will help you learn some of the basic commands and get comfortable with `vim`.
+I'm still no master at using `vim`, but I'm already enjoying it a lot.
 
 ###Getting Started
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/szTtE60fIt8" frameborder="0" allowfullscreen></iframe>
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/szTtE60fIt8?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 It was difficult at first trying to transverse my code while using `vim`. I was so used to being able to use my mouse and simply click where I wanted to go.
 I was now at the mercy of moving my cursor one line at a time to go anywhere until I learned more about the many helpful tools `vim` already had just for traveling through code.
@@ -113,17 +104,8 @@ Luckily, `vim` has two special keys to get you editing much easier.
 The two, which are my favorite features of `vim`, are the `shift-a` (takes you to the end of the line and into insert mode) and the `shift-i` (takes you to the beginning of the line and into insert mode) command.
 You can also press `a` to append after the cursor position, as well as `i` to insert before the current cursor position
 
-One problem that I would occasionally get is I would do some sort of command to indent and highlight something that I did not want to highlight.
-At first I did not even know that I could highlight things so I thought I messed something up and this would affect my code. This is not the case. There are many different ways to highlight and this is exists to help with `vim`.
-If this is done by accident then there are a few ways to get rid of the highlight. 
-Highlighting something else would get rid of this, but when I first started using `vim` I did not even know how to do that.
-
-There is a command that will get rid of any highlights and return the text back to normal without highlighting anything else. Just type `:nohlsearch` and the highlight will go away.
-
-
-
-####Indentation
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/uuztdE_gixs" frameborder="0" allowfullscreen></iframe>
+###Indentation
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/uuztdE_gixs?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 At first it felt very time consuming to indent multiple lines.
 I would go to the beginning of each line and after using `i` and type tab.
@@ -134,10 +116,8 @@ All that was left to do was to type `>` after everything I wanted to indent was 
 Typing `<` would instead indent it to the left if I ever wanted to do that.
 This greatly improved my usage of `vim` for `V`, or `v` if users wanted to highlight characters instead of entire lines, was could be combined with many commands and not just indenting.
 
-
-
-####Deletion
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/G2ppzuNpr98" frameborder="0" allowfullscreen></iframe>
+###Deletion
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/G2ppzuNpr98?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 Just like indenting, I thought that I could only delete one character at a time when I started using `vim`.
 This would become bothersome if I wanted to fix a big part of my code that I knew needed to be deleted.
@@ -148,10 +128,8 @@ The most helpful ways were pressing `x` after highlighting what I wanted deleted
 `dw` will delete the rest of the current word.
 These commands made writing code in `vim` go by much faster.
 
-
-
-####Replacing
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/TPbAdONJHyA" frameborder="0" allowfullscreen></iframe>
+###Replacing
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/TPbAdONJHyA?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 Similar to using `d` to get rid of code, I learned a few ways to replace what was already typed. 
 Lower case `r` can replace one letter while upper case `R` can replace one letter with many. 
@@ -159,19 +137,28 @@ Just type `r` or `R` and what you want to replace it with.
 Some commands allow the user to replace multiple characters with as many as the user wants to using the `c` command. 
 A few of these that I found most helpful were cw to replace the rest of the current word, `cb` replaces the characters before the cursor on the current word, `c$` replaces the rest of the current line, and `c0` replaces the entire line before the cursor.
 
+###Customizing your vim editor with the .vimrc file
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/VhAiVux6GBg?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
+Ever wondered how've we get our `vim` editor to work in the way we have it versus the default editor? 
+`vim` has a file where you can setup it's defaults such as auto parentheses, auto-indent, and much more. 
+By watching our video above, you can easily create new defaults for your `vim` editor that can cut time spent formating your text to spend more on coding.
 
-Learning The Terminal
----
-####The `ls` command
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/xSSahh5HbUY" frameborder="0" allowfullscreen></iframe>
+##Learning The Terminal
 
-The `ls` command is one of the most used commands in bash. 
+One of the best features of Unix operating systems is the powerful terminal they provide.
+
+###The `ls` command
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/xSSahh5HbUY?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
+
+The `ls` command is one of the most used terminal commands. 
 I would say that there isn't a time that I don't use `ls` when using the terminal. 
 Proper knowledge of the `ls` command and the useful flags for `ls` helps to streamline the programming process. 
+
 Passing in a directory name will display the contents of that directory. 
 It is also possible to pass in a path for a directory to display any directory, regardless of the directory the user is currently in.
 The basic `ls` command, when run, displays the contents within the current working directory.
+
 If the `-a` flag is passed in with `ls`, all items in the current working directory prepended with a `.` are also displayed, along with the rest of the items.
 Passing in the `-l` flag prints information for each item in the directory in a series of columns on a single line. 
 The first column displays the read, write, and executable permissions for the main user, the group the current user is in, and any user in that order. 
@@ -179,15 +166,13 @@ The next column shows the owner of the item and the next column shows the group 
 The fourth column displays the size, in bytes, of the item. 
 The fifth column displays the moment the item was created, and the last column displays the name of the item.
 If the `-R` flag is passed in, the command will display the contents of the current directory, and then recursively enter every directory within the current directory and display the contents of that directory, then keep going into every directory until there are no more directories in the current directory it is in.
+
 All these options are combinable for different uses. 
 For example, I could use the `-l` and `-a` flags to display the information for the items prepended with a `.` , or use `-R` and `-l` together.
 
-####The `cd` and `mv` commands
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/1s5TiFbETh4" frameborder="0" allowfullscreen></iframe>
+###The `cd` and `mv` commands
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/1s5TiFbETh4?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
  
-`$ cd directory/path`  
-`$ mv filename/directory_name destination`
-
 The `cd` and `mv` commands are crucial commands in order to actually use the terminal.
 Without cd, I would forever be stuck in their home directory.
 The `mv` command is necessary for moving files from one section of the hard drive.
@@ -203,8 +188,9 @@ The destination argument can be a path, so I can move the item to any directory 
 
 
 
-####Scripts
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/ZnIrku27C94" frameborder="0" allowfullscreen></iframe>
+###Recording terminal sessions via scripts
+
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/ZnIrku27C94?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 Have you ever wondered how you could possibly record data output from a program, or how you could record a list of commands within your terminal to share it with your colleague or professors in the future? 
 With the `script` command, all of this is possible. 
@@ -214,14 +200,32 @@ Once you've gotten your script started, anything and everything you do within th
 Then when you're done, type `exit` and your terminal will say your script session has ended and re-state the filename in which it recorded all your commands in. 
 You can then share or upload your script to show the any bugs or amazing new programs you've gotten to make.
 
+###How To SSH (into well server)
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/Letf4txWPic?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
+For the CS100 class, working within UCR's well server is crucial to succeed. 
+The version of linux that the school's well server uses is different than other linux builds. 
+Because of this, compilers will work differently in the well server than other local bash terminals, giving error messages after compilation on local bash terminals when compilation on the school servers will not, or compiling fine locally but failing to compile when compiled on the well server. 
+Therefore, it is necessary to `ssh` into the well server and compile and run any code before submission. 
+To `ssh` into the server, write in the command line `ssh`, followed by your net ID, and append `@bell.cs.ucr.edu`. 
+You will be prompted for the password associated with the net ID (the password you use when signing into the lab computers), then placed in the home directory. 
+To exit out of the server, type into the command line `exit`. 
+You will exit the server and be placed back into your local bash. 
+Any change saved to the server will be saved, so if you exit and re-enter the server, the changes will remain. 
+If it works on well, then it will work when it is graded. It's not necessary to write the code in the school's server, but I would recommend doing all writing in the well server so that it is faster to debug and test, as opposed to writing locally, copying the file, saving it to your personal server, then compiling. I know for myself, when working on my first assignment for CS100, I wrote and compiled all my on my local machine and then submitted the final version without first checking if it compiled and ran on the school's server. Sure enough, I received a zero for inability to compile. From then on, I never wrote any code on my local terminal, doing all work on the school's server. I then checked my final version after modifying it to work on the school's server, and it didn't compile in my own bash terminal. After that, I realized there was no point in writing code on my local terminal, as it was easier to ssh into the school server and do all my work in there. It cloud-saves all your work, allowing you to access it almost anywhere. It's a really useful tool while still a student here at UCR.
 
-Error Checking
----
+###Spectacle App: Using the terminal and `vim` in one screen
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/j1fnYZp4foI?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
+
+One of the first things I noticed about `vim` that I initially disliked was that it took over the terminal when I used it.
+I thought that I would have to close `vim` each time I wanted to test if my program could run correctly.
+To get around this issue, I started using two terminals instead of just one while I was programming.
+I would run `vim` using the first terminal and would run the executable in the second.
+It was as simple as using `:w` to save on `vim` instead of using `:wq` to save and quit.
+I could now test my code without ever having to close `vim`.
+
 ####PERROR
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/GsoVzP3sRsA" frameborder="0" allowfullscreen></iframe>
-
-`perror(const char*);`
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/GsoVzP3sRsA?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 When programming for unix based operating systems (which is a primary component of CS100), system calls are a prominent component for code. 
 When coding, error checking is always necessary. 
@@ -236,70 +240,3 @@ Without it, bugs will be exponentially harder to find and fix and will significa
 Also, if you're like me and essentially did not use any `perror` functions whatsoever, your grade will suffer.
 It's really simple to implement, essentially adding only a line or two per system call, but the benefits are enormous.
 
-
-##
-In conclusion to `vim`, there are many commands that are quite useful but untaught. 
-For example, the `%` command. 
-It took me quite a while to completely understand the `%` command but it became really useful as I mastered it. 
-It is supposed to match the current parenthesis, or a character similar to parentheses, to the one that closes it but there were times when it just did not work.
-
-When it works, it is very helpful for it helps users to see if something is outside of a loop or if a loop ends where it should, but I noticed that it sometimes would be buggy if there was some parenthesis in comments.
-The `%` command does not differentiate between something a comment or normal code.
-This led to some very confusing moments where it would seem that my code would work even if `%` told me that the parenthesis did not match up correctly.
-Users should make sure to keep track of any parenthesis in comments if they decide to use the `%` command.
-
-Many of these commands are very helpful to speed up coding, but can still take quite a while if they are needed to be done multiple times.
-This can be solved by simply typing the number of times a user wants the command to be done before the user types the command.
-If I wanted to indent multiple lines three times, then I would do what I normally would do but type `3>` instead of just `>` by itself.
-This may not seem like much, because highlighting it and using `>` three times will give the same result and may seem easier.
-The reason why using a number is so useful is it would be quite time-consuming to highlight one 100 lines of code each time it is to be indented.
-This helps save time when doing that command a great number of times or over a large amount of code.
-
-`vim` can seem frustrating at first and it may appear to be much more difficult to do what people are used to.
-Users may want to give up because they have to relearn commands that were once second nature with other editors.
-It may take a while to relearn things such as `u` is now undo and `cntrl-R` is now redo, but it will be worth it in the end.
-`vim` has many tricks that can help speed up programming, even if new users do not learn it all right away.
-The information can always be found if new users need a reminder on how to do something.
-With time, the commands in `vim` will start to become just as easy to use as the commands in any other editor.
-If users stick to learning how to use `vim` a little at a time, then they will begin to be surprised how they ever coded without it.
-
-
-
-##Extras
-
-####How To SSH (into well server)
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/Letf4txWPic" frameborder="0" allowfullscreen></iframe>
-
-`$ ssh your_netID@bell.cs.ucr.edu`
-
-For the CS100 class, working within UCR's well server is crucial to succeed. 
-The version of linux that the school's well server uses is different than other linux builds. 
-Because of this, compilers will work differently in the well server than other local bash terminals, giving error messages after compilation on local bash terminals when compilation on the school servers will not, or compiling fine locally but failing to compile when compiled on the well server. 
-Therefore, it is necessary to `ssh` into the well server and compile and run any code before submission. 
-To `ssh` into the server, write in the command line `ssh`, followed by your net ID, and append `@bell.cs.ucr.edu`. 
-You will be prompted for the password associated with the net ID (the password you use when signing into the lab computers), then placed in the home directory. 
-To exit out of the server, type into the command line `exit`. 
-You will exit the server and be placed back into your local bash. 
-Any change saved to the server will be saved, so if you exit and re-enter the server, the changes will remain. 
-If it works on well, then it will work when it is graded. It's not necessary to write the code in the school's server, but I would recommend doing all writing in the well server so that it is faster to debug and test, as opposed to writing locally, copying the file, saving it to your personal server, then compiling. I know for myself, when working on my first assignment for CS100, I wrote and compiled all my on my local machine and then submitted the final version without first checking if it compiled and ran on the school's server. Sure enough, I received a zero for inability to compile. From then on, I never wrote any code on my local terminal, doing all work on the school's server. I then checked my final version after modifying it to work on the school's server, and it didn't compile in my own bash terminal. After that, I realized there was no point in writing code on my local terminal, as it was easier to ssh into the school server and do all my work in there. It cloud-saves all your work, allowing you to access it almost anywhere. It's a really useful tool while still a student here at UCR.
-
-
-
-####Modifying your `vim` editor (.vimrc file)
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/VhAiVux6GBg" frameborder="0" allowfullscreen></iframe>
-
-Ever wondered how've we get our `vim` editor to work in the way we have it versus the default editor? 
-`vim` has a file where you can setup it's defaults such as auto parentheses, auto-indent, and much more. 
-By watching our video above, you can easily create new defaults for your `vim` editor that can cut time spent formating your text to spend more on coding.
-
-
-
-####Spectacle App: Using the terminal and `vim` in one screen
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/j1fnYZp4foI" frameborder="0" allowfullscreen></iframe>
-
-One of the first things I noticed about `vim` that I initially disliked was that it took over the terminal when I used it.
-I thought that I would have to close `vim` each time I wanted to test if my program could run correctly.
-To get around this issue, I started using two terminals instead of just one while I was programming.
-I would run `vim` using the first terminal and would run the executable in the second.
-It was as simple as using `:w` to save on `vim` instead of using `:wq` to save and quit.
-I could now test my code without ever having to close `vim`.
