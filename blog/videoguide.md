@@ -82,11 +82,6 @@ It was difficult at first trying to transverse my code while using `vim`. I was 
 I was now at the mercy of moving my cursor one line at a time to go anywhere until I learned more about the many helpful tools `vim` already had just for traveling through code.
 Some are simple such as `gg` to go to the top of the code, `G` to go to the bottom of it, and `(any number)G` to go to the line number typed before the capital G.)
 
-Some ways of moving through the text are a little more complicated but easy once a user gets used to them.
-Any line of text can be searched if something specific is being searched for the text’s line is unknown.
-This is done by using the command `/` and then typing what the user wants to search.
-This will highlight the searched text wherever it appears in the code and place the cursor in the first highlighted area that it can find after the cursor’s original position. There are many ways to transverse these highlighted characters, but the one I found most helpful was typing `n` for it will take you to the next highlighted word no matter where you currently are.
-
 Cutting, copying, and pasting took a while to get used to when using `vim`.
 Sometimes there was something I wanted in my code that was in the instructions for the assignment.
 I knew that in order to paste I would use the `p` command, but I could not paste things from outside of `vim` into it.
@@ -104,6 +99,12 @@ Luckily, `vim` has two special keys to get you editing much easier.
 The two, which are my favorite features of `vim`, are the `shift-a` (takes you to the end of the line and into insert mode) and the `shift-i` (takes you to the beginning of the line and into insert mode) command.
 You can also press `a` to append after the cursor position, as well as `i` to insert before the current cursor position
 
+Some ways of moving through the text are a little more complicated but easy once a user gets used to them.
+`vim` also allows you to use the `v` or `shift-v` keys to highlight certain text or lines of code.
+You can then use other `vim` commands such as the copy, paste and delete keys to perform your needed actions.
+
+
+
 ###Indentation
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/uuztdE_gixs?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
@@ -114,7 +115,6 @@ I felt this way until I found about the `V` command.
 `V` lets users highlight a line and pressing up or down can highlight as many lines as they desire.
 All that was left to do was to type `>` after everything I wanted to indent was highlighted and it all would indented once to the right.
 Typing `<` would instead indent it to the left if I ever wanted to do that.
-This greatly improved my usage of `vim` for `V`, or `v` if users wanted to highlight characters instead of entire lines, was could be combined with many commands and not just indenting.
 
 ###Deletion
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/G2ppzuNpr98?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
@@ -125,7 +125,7 @@ There are plenty of different ways that I learned to speed this up.
 The most helpful ways were pressing `x` after highlighting what I wanted deleted, and using the `d` command.
 `d` can be used with many different things after it. `dd` will delete the entire line.
 `d$` will delete the rest of the current line.
-`dw` will delete the rest of the current word.
+`de` will delete from where the cursor is up until the end of the word.
 These commands made writing code in `vim` go by much faster.
 
 ###Replacing
@@ -135,7 +135,7 @@ Similar to using `d` to get rid of code, I learned a few ways to replace what wa
 Lower case `r` can replace one letter while upper case `R` can replace one letter with many. 
 Just type `r` or `R` and what you want to replace it with. 
 Some commands allow the user to replace multiple characters with as many as the user wants to using the `c` command. 
-A few of these that I found most helpful were cw to replace the rest of the current word, `cb` replaces the characters before the cursor on the current word, `c$` replaces the rest of the current line, and `c0` replaces the entire line before the cursor.
+There are three `c` commands that I regularly use: `ce` , which deletes up until the end of the word that the cursor is currently on, then allows you to insert immediately; `c$` , which deletes from where the cursor is up until the end of the line, then allows you to insert immediately; and `cc` , which deletes the whole line that the cursor is on and allows you to insert immediately at the beginning of the line.
 
 ###Customizing your vim editor with the .vimrc file
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/VhAiVux6GBg?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
@@ -223,6 +223,8 @@ To get around this issue, I started using two terminals instead of just one whil
 I would run `vim` using the first terminal and would run the executable in the second.
 It was as simple as using `:w` to save on `vim` instead of using `:wq` to save and quit.
 I could now test my code without ever having to close `vim`.
+Users with Windows 7 & above automatically have this ability by dragging your screen to the left or right border of your screen.
+Unfortunately, OS X users don't have this built in ability. To get around this, OS X users can install the Spectacle App which will enable you to organize multiple windows on your screen with a touch of a buttom.
 
 ####PERROR
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/GsoVzP3sRsA?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
