@@ -4,12 +4,12 @@ author: <a href="//github.com/holidaylvr">Paul Starkey</a>
 ---
 
 Learning Haskell was excruciating.
-The error messages from the Haskell compiler `ghc` were way more difficult to understand than the error messages I was used to from `g++`.
+The error messages from the Haskell compiler ghc were way more difficult to understand than the error messages I was used to from g++.
 I admit I'm still a novice programmer: 
 My only experience is a year of classes in C++ programming.
 But the Haskell compiler should do a better job generating error messages for beginners like me.
 
-Let's see some concrete examples. 
+First we'll see four concrete examples of ghc doing worse than g++, then Mike will talk about some ways to fix ghc's error messages.
 
 ### Example 1 
 
@@ -79,12 +79,12 @@ Now let's see the error messages:
     Failed, modules loaded: none.
 ```
 
-Both error messages let the programmer know where the mistake happened, but the `g++` message is far more helpful. 
+Both error messages let the programmer know where the mistake happened, but the g++ message is far more helpful. 
 It tells us how to fix the syntax error by adding some missing parentheses. 
 *Bam!*
 Problem solved. 
 
-Now let us turn to `ghc`'s output. 
+Now let us turn to ghc's output. 
 Okay, something about a parse error... might have indentation errors... and no modules loaded. 
 Cool. 
 Now I've never taken a compiler course, so I don't know what `parse error` means,
@@ -194,11 +194,11 @@ Now let us see the different error messages that are produced.
     Failed, modules loaded:none.
 ```
 
-Once again, it appears that the C++ compiler `g++` knew exactly what was wrong with the code and how to fix the error. 
+Once again, it appears that the C++ compiler g++ knew exactly what was wrong with the code and how to fix the error. 
 It tells me that there are not enough arguments in my function call.
 
 Wow, Hakell's error message is quite the mouthful this time. 
-I suppose this is better than just a `parse error` message, but I'm not sure what exactly `ghc` is even wanting me to correct. 
+I suppose this is better than just a `parse error` message, but I'm not sure what exactly ghc is even wanting me to correct. 
 The error is simply too technical to help me.
 
 ### Example 4
@@ -249,11 +249,12 @@ And the errors:
     Failed, modules loaded: none.
 ```
 
-The C++ error clearly explains how to fix the code, and I even understand the Haskell error. 
+The C++ error clearly explains how to fix the code, and I even understand the Haskell error this time. 
 Both languages tell me that there are too many arguments. 
 Yet the C++ error message tells me this without a bunch of technical jargon.
 So even when Haskell is actually helpful with its error messages, it still manages to hide what it wants the user to do.
 
+<!--
 ### Example 5
 
 For my last example, I give you another pair of syntax errors. 
@@ -317,23 +318,58 @@ Normally, that would be an excellent lead to the solution if I did not have four
 As you can see, I forgot to include `show` before using the `size` function provided by Haskell. 
 The mistake itself seems simple enough, yet from the error that Haskell gave me, I was unable to find the solution on my own. 
 
+-->
+
 ###Conclusion 
 
 To me, Haskell seems like a language only for experienced programmers because the errors are not user-friendly. 
 How can I write code if a few simple mistakes cripple my progress?
-Haskell's compiler `ghc` simply lags behind `g++` in terms of useful error messages for beginners.
+Haskell's compiler ghc simply lags behind g++ in terms of useful error messages for beginners.
 
-<i>
-<h3>Epilogue</h3>
+##Mike's Epilogue
 
-Complaints about `ghc`'s error messages are very common, even among experienced haskellers.
+<!--
+Complaints about ghc's error messages are very common, even among experienced haskellers.
 See for example ghc tickets:
 [#459](https://ghc.haskell.org/trac/ghc/ticket/459),
 [#984](https://ghc.haskell.org/trac/ghc/ticket/984),
 [#999](https://ghc.haskell.org/trac/ghc/ticket/999),
 [#2046](https://ghc.haskell.org/trac/ghc/ticket/2046),
 [#3401](https://ghc.haskell.org/trac/ghc/ticket/3401),
-and [#5057](https://ghc.haskell.org/trac/ghc/ticket/5057)
-I've created a patch for ghc that fixes these issues.
+and [#5057](https://ghc.haskell.org/trac/ghc/ticket/5057).
+-->
 
-</i>
+I've created a patch for ghc that clarifies the specific error messages that Paul had trouble with (and a few related ones.)
+In particular: 
+
+<ol>
+<li>Anytime there is a parse error caused by a malformed `if`, `case`, lambda, or (non-monadic) `let`, ghc will now remind the programmer of the correct syntax.
+In the first example Paul gives above, we would get the much clearer:
+
+```
+parse error in if statement: missing required else clause
+```
+
+<li>
+To help with the second example, anytime ghc encounters a parse error caused by a `<-` token, it now outputs the hint:
+
+```
+Perhaps this statement should be within a 'do' block?
+```
+
+<li>
+The third example Paul points out comes from the type checker, rather than the parser.
+It's a little less obvious how to provide good hints here.
+My idea is based on the fact that it is fairly rare for functions to be instances of type classes.
+The only example I know of is the `Monad` instance for `(a->)`.
+
+Therefore, if the type checker can't find an instance for a function, the more likely scenario is that the programmer simply did not pass enough parameters to the function.  My proposed change is that in this situation, ghc would output the hint:
+```
+maybe you haven't applied enough arguments to a function?
+```
+ 
+</ol>
+
+This patch doesn't completely fix ghc's problem with poor error messages.
+For example, it doesn't address Paul's last point about type errors being verbose.
+But hopefully it will make it a little easier for aspiring haskellers who still aren't familiar with all the syntax rules.
