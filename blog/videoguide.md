@@ -1,5 +1,5 @@
 ---
-title: Getting started with GitHub, vim, and the terminal
+title: Getting started with GitHub, vim, and the Terminal
 author: <a href="//github.com/rgosh001">Rashid Goshtasbi</a> and <a href="//github.com/kryne001">Kyler Rynear</a>
 ---
 
