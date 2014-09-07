@@ -10,50 +10,48 @@ But our professor made us use them... and eventually... after we learned the too
 So we've put together a simple video guide to help you learn and enjoy these tools too.
 We did this as part of the CS100 open source software development class at UC Riverside. 
 
-Click [HERE](https://www.youtube.com/watch?v=bap-NSjgPFg&list=PLQ6W7BIxh4zsJgGwZr-cpHCB_EjyY1NFK)to watch the completely playlist on YouTube.
+*[Click here](https://www.youtube.com/watch?v=bap-NSjgPFg&list=PLQ6W7BIxh4zsJgGwZr-cpHCB_EjyY1NFK) to watch the full playlist on YouTube.*
 
 ##Getting Started with GitHub
 
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/bap-NSjgPFg" frameborder="0" allowfullscreen></iframe>
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/bap-NSjgPFg?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 This video shows you step by step how to create an account on GitHub. 
 Then we see how to create our first repository called `test`, and transfer it from GitHub onto our local machine using the `git clone` command.
 
 ###Creating a file, pushing to GitHub, and pulling from GitHub
 
-<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/UrLkCZaXg9o" frameborder="0" allowfullscreen></iframe>
+<iframe width="697.6" height="419.65" src="//www.youtube.com/embed/UrLkCZaXg9o?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 How do we create files and upload them to GitHub?
 The `touch <filename>` command will create an empty file for you.
 The `vim <filename>` command will open a file in an advanced text editor that [we talk about farther down the page](#vim).
 The `git push` command sends these files from your local machine up to GitHub, and the `git pull` command downloads files from GitHub and saves them to your local computer.
 
-###Branches
+###<a name="branch">Branches</a>
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/E8-hUsR7IXA?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
-Thanks to GitHub, you are able to create branches off of your program that will enable you to work around your bugs and eventually merge the correct fixes to your main program.
-You can create a `branch` (for example: example_branch) and work on the example_branch files and any other file without messing up your original code. 
-After which, you can get back to your `master` branch and merge your two branches together. 
-In other terms, this is called version control.
+Branches let you work on files without messing up your original code. 
+When you finish your changes, you can merge them into the `master` branch.
+This is the best part of version control.
 
 
-###Tags
+###<a name="tags">Tags</a>
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/WKG1u4Y_f3s?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 Most programs have different versions, for example: 1.0, 1.1, 1.2, 2.1 and 2.2.1.
 The `git tag` command let's you create these versions. 
 They're just like a checkpoint in a Mario game!
 
-
-###Forking & Pull Requests
+###<a name="fork">Forking & Pull Requests</a>
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/tTnL84EvJTM?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
-Let's say you want to contribute to an open source project but you don't have permission.
-In order to contribute to someone else's repository, you must first "fork" it to create a repo that you do have `push` permission on.
+Let's say you want to contribute to an open source project, but you don't have permission.
+In order to contribute to someone else's repository, you must first "fork" it to create a repo that you do have push permission on.
 Then you issue a pull request through the GitHub website.
 This tells the owner of the original repo that you've made some changes they can incorporate.
 
-###The `README.md` file
+###<a name="readme">The `README.md` file</a>
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/4UTSEKzsSvM?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 `README.md` files are how you document your projects.
@@ -62,7 +60,7 @@ Basically, it explains to someone else who has absolutely no idea what your prog
 The `.md` extension at the end of the filename indicates that the file uses markdown formatting.
 This is a simple way to create nice looking documentation.
 
-## Learning vim
+## <a name=vim>Learning vim</a>
 
 `vim` is an advanced text editor for Unix operating systems.
 It's powerful, but all the commands are intimidating for first time users.
@@ -104,24 +102,24 @@ Typing `<` would instead indent it to the left if I ever wanted to do that.
 
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/x0BMbS2kWYc" frameborder="0" allowfullscreen></iframe>
 
-Two commands that are used for deletion are the `x` and `d` commands
 
-The two ways of using the `x` command are `x`, which deletes the character that the cursor is on and moves the cursor to the right; and `X`, which deletes the character that the cursor is on and moves the cursor to the left.
+There are two commands for deleting single character. `x` deletes the character that the cursor is on and moves the cursor to the right; and `X` deletes the character that the cursor is on and moves the cursor to the left.
 
-`d` can be used with many different things after it. `dd` will delete the entire line.
+The `d` command is a more powerful way to delete.
+`d` can be used with many different things after it. 
+`dd` will delete the entire line.
 `d$` will delete the rest of the current line.
 `de` will delete from where the cursor is up until the end of the word.
 
-###Replacing
+###<a name="replace">Replacing</a>
 
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/d-quT7u3f_o" frameborder="0" allowfullscreen></iframe>
 
-Similar to using `d` to get rid of code, I learned a few ways to replace what was already typed. 
 Lower case `r` can replace one letter while upper case `R` can replace one letter with many. 
-Some commands allow the user to replace multiple characters with as many as the user wants to using the `c` command. 
-There are three `c` commands that I regularly use for replacment: `ce` , which deletes up until the end of the word that the cursor is currently on, then allows you to insert immediately; `c$` , which deletes from where the cursor is up until the end of the line, then allows you to insert immediately; and `cc` , which deletes the whole line that the cursor is on and allows you to insert immediately at the beginning of the line.
 
-###Customizing your vim editor with the .vimrc file
+There are three `c` commands that I regularly use for replacement: `ce` , which deletes up until the end of the word that the cursor is currently on, then allows you to insert immediately; `c$` , which deletes from where the cursor is up until the end of the line, then allows you to insert immediately; and `cc` , which deletes the whole line that the cursor is on and allows you to insert immediately at the beginning of the line.
+
+###<a name="vimrc">Customizing your vim editor with the .vimrc file</a>
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/VhAiVux6GBg?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 Ever wondered how've we get our `vim` editor to work in the way we have it versus the default editor? 
@@ -132,7 +130,7 @@ By watching our video above, you can easily create new defaults for your `vim` e
 
 One of the best features of Unix operating systems is the powerful terminal they provide.
 
-###The `ls` command
+###<a name="ls">The `ls` command</a>
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/xSSahh5HbUY?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 The `ls` command is one of the most used terminal commands. 
@@ -154,7 +152,7 @@ If the `-R` flag is passed in, the command will display the contents of the curr
 All these options are combinable for different uses. 
 For example, I could use the `-l` and `-a` flags to display the information for the items prepended with a `.` , or use `-R` and `-l` together.
 
-###The `cd` and `mv` commands
+###<a name="cdmv">The `cd` and `mv` commands</a>
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/1s5TiFbETh4?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
  
 The `cd` and `mv` commands are crucial commands in order to actually use the terminal.
@@ -172,7 +170,7 @@ The destination argument can be a path, so I can move the item to any directory 
 
 
 
-###Recording terminal sessions via scripts
+###<a name="script">Recording terminal sessions via scripts</a>
 
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/ZnIrku27C94?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
@@ -181,14 +179,26 @@ By just typing `script file_name_here`, you can start a script.
 Also, you don't need to worry about making a file beforehand, because when you specify the filename, it will make once for you in that name. 
 Then when you're done, type `exit` and your terminal will say your script session has ended and re-state the filename in which it recorded all your commands in. 
 
-###How To SSH (into well server)
+###<a name="ssh">How To SSH (into well server)</a>
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/Letf4txWPic?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
-The `ssh` command allows you to access a remote server from your home terminal. Computer Science students have the ability to log into the school's server. The way to do access the terminal is to type into the command terminal the following text: `ssh your_NetId@bell.cs.ucr.edu` and pressing enter. If it is your first time entering the terminal, you will be asked to trust the encryption that the server uses, then prompted to enter the password associated with your NetID. Once doing all those steps, you will be brought to your home directory on the server. To exit the server, type `exit` into the command prompt and press enter. 
+Computer Science students have the ability to log into the school's server using the `ssh` command.
+The way to do access the terminal is to type into the command terminal the following text: 
+```
+ssh your_NetId@bell.cs.ucr.edu
+``` 
+If it is your first time entering the terminal, you will be asked to trust the encryption that the server uses, then prompted to enter the password associated with your NetID. Once doing all those steps, you will be brought to your home directory on the server. To exit the server, type `exit` into the command prompt and press enter. 
 
-A useful command that moves files to and from the remote server onto your home computer is the `scp` command. To put items from your home computer to the school's server, type into the command prompt: `scp filename/absolute_path your_NetID@bell.cs.ucr.edu:absolute_path` . To move items from the remote server onto your home computer, type into the command prompt: `scp your_NetID@bell.cs.ucr.edu:absolute_path absolute_path` .
+A useful command that moves files to and from the remote server onto your home computer is the `scp` command. To put items from your home computer to the school's server, type into the command prompt: 
+```
+scp filename/absolute_path your_NetID@bell.cs.ucr.edu:absolute_path
+```
+To move items from the remote server onto your home computer, type into the command prompt: 
+```
+scp your_NetID@bell.cs.ucr.edu:absolute_path absolute_path
+```
 
-###Spectacle App: Using the terminal and `vim` in one screen
+###<a name="spectacle">Spectacle App: Using the terminal and `vim` in one screen</a>
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/j1fnYZp4foI?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 One of the first things I noticed about `vim` that I initially disliked was that it took over the terminal when I used it.
@@ -199,7 +209,7 @@ I would run `vim` using the first terminal and would run the executable in the s
 It was as simple as using `:w` to save on `vim` instead of using `:wq` to save and quit.
 I could now test my code without ever having to close `vim`.
 
-####PERROR
+###<a name="perror">perror</a>
 <iframe width="697.6" height="419.65" src="//www.youtube.com/embed/GsoVzP3sRsA?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 
 When programming for unix based operating systems (which is a primary component of CS100), system calls are a prominent component for code. 
