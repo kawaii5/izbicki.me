@@ -1,4 +1,4 @@
-#Conversions Between Types/Variables in Haskell vs. C++
+#Conversions Between Types in Haskell vs. C++
 
 ##Understanding Return Types in Haskell vs. C++
 I found `:t` fascinating when learning Haskell. This command explains how to use a function by showing what types it uses.  For example, `show` converts types into `String`:
