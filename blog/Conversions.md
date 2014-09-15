@@ -39,7 +39,7 @@ and to do the reverse, `ByteString` to `String`:
 
 This conversion between `ByteString` and `String` in Haskell is similar to converting between `char*` and `string` in C++.
 
-In C++, to convert from `char*` to `string`, we would use the built in string constructor that takes in a ‘char*’. Include the libraries `sstream` and `string`.:
+In C++, to convert from `char*` to `string`, we would use the built in string constructor that takes in a `char*`. Include the libraries `sstream` and `string`.:
 
     char* str = “hello”;
     string str2(str);
