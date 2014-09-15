@@ -6,25 +6,25 @@ I found `:t` fascinating when learning Haskell. This command explains how to use
     ghci> :t show
     show :: Show a => a -> String
 
-There are many different ways to represent string-like things.  In Haskell, converting between a `String`, `ByteString`, and `Text` is important because each function asks for a different type. For example, `(++) :: [a] -> [a] -> [a]` asks for `[a]`. `[a]` is a list with an ambiguous type; it can be an `Integer` or `Char`.
+Programming languages have many different ways to store characters, like a string. Haskell can store characters in `String`, `ByteString` and `Text`. Converting between a `String`, `ByteString`, and `Text` is important because functions ask for different types. For example, `writeBS :: ByteString -> Snap ()` asks for `ByteString`. If we put any other way of storing characters, like a `String`, there will be an error message. This is because Haskell is "lazy" it doesn't convert a `ByteString` to `String` automatically.
 
-    ghci> (++) 2 3
+    ghci> writeBS "hello"
 
-    <interactive>:2:6:
-        No instance for (Num [a0]) arising from the literal `2'
-        Possible fix: add an instance declaration for (Num [a0])
-        In the first argument of `(++)', namely `2'
-        In the expression: (++) 2 3
-        In an equation for `it': it = (++) 2 3
+    <interactive>:3:9:
+        Couldn't match expected type `Data.ByteString.Internal.ByteString'
+                with actual type `[Char]'
+        In the first argument of `writeBS', namely `"hello"'
+        In the expression: writeBS "hello"
+        In an equation for `it': it = writeBS "hello"
 
-    ghci> (++) ['a'] ['b']
-    "ab"
+Later, I will show you how to convert a `String` into a `ByteString` so you can use this function.
+(For C++ users, it is as if you are converting between a `list<char>`, ASCII `string` or `char*`, and `wstring` respectively. `list<char>` does not necessarily store characters adjacently, like the `[Char]`, or `String` in Haskell. `string` or `char*` stores characters adjacently like Haskell's `ByteString`. `wstring` can hold encodings other than ASCII like Haskell's `Text`. However, `Text` can take any type of encoding, but `wstring` takes UTF16. The [`ICU`](http://site.icu-project.org/) provides a way to store characters the way `Text` does in Haskell.)
+--expand on the comparisons
 
-(For C++ users, it is as if you are converting between a Linked List of `char`, ASCII `string` or `char*`, and unicode `string` respectively.)
+For C++, `string` uses ASCII encoding. However, there are other variable types like `wstring` that can hold other types of encoding. I will expand on this when I talk about converting from `wstring`. This is similar to Haskell’s `Text`, but `Text` can take any type of encoding.
+C++ does not have a variable type specifically for unicode, but there are types that can store unicode characters such as `wstring` and `utf8`. C++ has a library by IBM called [`ICU`](http://site.icu-project.org/) which can take all types of encodings.
 
-For C++, unicode `string` may store characters that have a different encoding than ASCII. This is similar to Haskell’s `Text`.
-`ByteString` in Haskell is stored like a `char*` in C++ because the characters are stored adjacently.
-C++ does not have a variable type specifically for unicode, but there are types that can store unicode characters such as `wstring` and `utf8`.
+First, we will look at a simple conversion, between `ByteString` and `String`.
 
 ---
 ###`ByteString` to `String` Conversions
@@ -49,12 +49,17 @@ In C++, to convert from `string` to `char*`, you would use `c_str()`,
     string s = “apple”;
     char* c_arr = s.c_str();
 
-Both C++ and Haskell take one line to convert between these two types of variables (after declaring the variable). However, Haskell’s conversion is clear and concise. C++ is not so straightforward. Next, we will talk about the conversions from `ByteString` and `Text`.
+Both C++ and Haskell take one line to convert between these two types of variables (after declaring the variable). These are both simplistic and look easy to use. The functions are clear and concise on their usage. Next, we will talk about the conversions from `ByteString` and `Text`.
 
 ---
 ###`ByteString` to `Text` Conversions
-In Haskell, there are several ways to convert from `ByteString` to `Text` because of the different types of unicode encodings.
-For example, in the library [`Data.Text.Encoding`](http://hackage.haskell.org/package/text-1.1.1.3/docs/Data-Text-Encoding.html) there is a function
+In Haskell, there are several ways to convert from `ByteString` to `Text` because of the different types of unicode encodings. There are many types of unicode because of the vast amount of characters. People in Russia use a different default encoding than the encoding we use in US (which is usually ASCII). We need different types of encoding to encode different types of characters, even if coming from different countries. If we used the ASCII encoding on the Russian language, it will output gibberish.
+
+####Unicode Explanation: Encodings
+Quick Reminder: A string stores 8-bit characters -------------------------
+
+
+In the library [`Data.Text.Encoding`](http://hackage.haskell.org/package/text-1.1.1.3/docs/Data-Text-Encoding.html) there is a function
 
     decodeUtf8 :: ByteString -> Text
 where it decodes a `ByteString` that contains `utf8` encoded text.
@@ -77,6 +82,8 @@ To convert to or from any type of unicode character (in both Haskell and C++), t
 
 ---
 ###Extra: C++ Conversions `wstring` vs. `utf8`
+`wstring` is a `string` in which is character is 16-bits long, twice as long as a `string` character. 
+
 Include the libraries `codecvt` and `string`.
 ([Click here for more information](http://stackoverflow.com/questions/4358870/convert-wstring-to-string-encoded-in-utf-8)).
 
