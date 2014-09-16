@@ -87,6 +87,7 @@ To convert to or from any type of unicode character (in both Haskell and C++), t
 Include the libraries `codecvt` and `string`.
 ([Click here for more information](http://stackoverflow.com/questions/4358870/convert-wstring-to-string-encoded-in-utf-8)).
 
+```C++
     // convert UTF-8 string to wstring
     std::wstring utf8_to_wstring (const std::string& str)
     {
@@ -100,6 +101,7 @@ Include the libraries `codecvt` and `string`.
         std::wstring_convert<std::codecvt_utf8<wchar_t>> myconv;
         return myconv.to_bytes(str);
     }
+```
 
 
 We can use these functions to convert between `wstring` and `utf8`.
