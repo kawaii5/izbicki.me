@@ -1,7 +1,7 @@
 #Conversions Between Character Strings in Haskell vs. C++
 
 ##Understanding Return Types in Haskell vs. C++
-I found `:t` fascinating when learning Haskell. This command explains how to use a function by showing what types it uses.  For example, `show` converts types into `String`:
+I found `:t` fascinating when learning Haskell. This command explains how to use a function by showing what types it uses. For example, `show` converts types into `String`:
 
 ```Haskell
     ghci> :t show
@@ -9,7 +9,7 @@ I found `:t` fascinating when learning Haskell. This command explains how to use
 ```
     
 ---
-Programming languages have many different ways to store characters, like a string. Haskell can store characters in `String`, `ByteString` and `Text`. Converting between a `String`, `ByteString`, and `Text` is important because functions ask for different types. For example, `writeBS :: ByteString -> Snap ()` asks for `ByteString`. If we put any other way of storing characters, like a `String`, there will be an error message. This is because Haskell is "lazy" it doesn't convert a `ByteString` to `String` automatically.
+Programming languages have many different ways to store characters, like a string. Haskell can store characters in `String`, `ByteString` and `Text`. Converting between a `String`, `ByteString`, and `Text` is important because functions ask for different types. For example, `writeBS :: ByteString -> Snap ()` asks for `ByteString`. If we put any other way of storing characters, like a `String`, there will be an error message.
 
 ```Haskell
     ghci> writeBS "hello"
