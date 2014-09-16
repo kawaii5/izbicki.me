@@ -127,5 +127,5 @@ We can use these functions to convert between `wstring` and `utf8`.
 However, I must know what kind of conversion I am doing. Otherwise, I may end up with gibberish or the incorrect output like the “[Bush hid the facts](http://en.wikipedia.org/wiki/Bush_hid_the_facts)” event. "Bush hid the facts" shows how important it is to know what encoding the characters have.
 
 ##Conclusion
-I think that converting in Haskell is cleaner, simpler, and straightforward. While there is a correct way to convert between types in Haskell, there isn’t a correct way to convert between variables in C++. C++ does not have a clear encoding variable for unicode, but Haskell takes care of each type of encoding type.
+I think that converting in Haskell is cleaner, simpler, and straightforward. While there is a correct way to convert between types in Haskell, there isn’t a clear, correct way to convert between variables in C++. C++ does not have a clear encoding variable for unicode, but Haskell takes care of each type of encoding type.
 
