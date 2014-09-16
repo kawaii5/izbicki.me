@@ -62,7 +62,7 @@ In C++, to convert from `string` to `char*`, you would use `c_str()`,
 ```
 
 Both C++ and Haskell take one line to convert between these two types of variables (after declaring the variable). These are both simplistic and look easy to use. The functions are clear and concise on their usage.
-Next, I will show you a more complicated conversion, between `ByteString` and `Text`.
+Next, we will look at a more complicated conversion, between `ByteString` and `Text`.
 
 ---
 ###`ByteString` to `Text` Conversions
