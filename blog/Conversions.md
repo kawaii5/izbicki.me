@@ -3,12 +3,15 @@
 ##Understanding Return Types in Haskell vs. C++
 I found `:t` fascinating when learning Haskell. This command explains how to use a function by showing what types it uses.  For example, `show` converts types into `String`:
 
+```Haskell
     ghci> :t show
     show :: Show a => a -> String
+```
     
 ---
 Programming languages have many different ways to store characters, like a string. Haskell can store characters in `String`, `ByteString` and `Text`. Converting between a `String`, `ByteString`, and `Text` is important because functions ask for different types. For example, `writeBS :: ByteString -> Snap ()` asks for `ByteString`. If we put any other way of storing characters, like a `String`, there will be an error message. This is because Haskell is "lazy" it doesn't convert a `ByteString` to `String` automatically.
 
+```Haskell
     ghci> writeBS "hello"
 
     <interactive>:3:9:
@@ -17,6 +20,7 @@ Programming languages have many different ways to store characters, like a strin
         In the first argument of `writeBS', namely `"hello"'
         In the expression: writeBS "hello"
         In an equation for `it': it = writeBS "hello"
+```
 
 Later, I will show you how to convert a `String` into a `ByteString` so you can use this function.
 (For C++ users, it is as if you are converting between a `list<char>`, ASCII `string` or `char*`, and `wstring` respectively. `list<char>` does not necessarily store characters adjacently, like the `[Char]`, or `String` in Haskell. `string` or `char*` stores characters adjacently like Haskell's `ByteString`. `wstring` can hold encodings other than ASCII like Haskell's `Text`. However, `Text` can take any type of encoding, but `wstring` takes UTF16. The [`ICU`](http://site.icu-project.org/) provides a way to store characters the way `Text` does in Haskell.)
@@ -31,23 +35,31 @@ First, we will look at a simple conversion, between `ByteString` and `String`.
 First, we will look at the Haskell’s `ByteString` conversions and compare them to C++ `string` conversions.
 In Haskell, to convert between `ByteString` and a `[Char]` or `String`, we would use the library [`Data.ByteString.Char8`](https://hackage.haskell.org/package/bytestring-0.9.2.1/docs/Data-ByteString-Char8.html).
 
+```Haskell
     pack :: String -> ByteString
+```
 and to do the reverse, `ByteString` to `String`:
 
+```Haskell
     unpack :: ByteString -> String
+```
 
 
 This conversion between `ByteString` and `String` in Haskell is similar to converting between `char*` and `string` in C++.
 
 In C++, to convert from `char*` to `string`, we would use the built in string constructor that takes in a `char*`. Include the libraries `sstream` and `string`.:
 
+```C++
     char* str = “hello”;
     string str2(str);
+```
 
 In C++, to convert from `string` to `char*`, you would use `c_str()`,
 
+```C++
     string s = “apple”;
     char* c_arr = s.c_str();
+```
 
 Both C++ and Haskell take one line to convert between these two types of variables (after declaring the variable). These are both simplistic and look easy to use. The functions are clear and concise on their usage. Next, we will talk about the conversions from `ByteString` and `Text`.
 
@@ -61,20 +73,26 @@ Now, each character in a string uses the default encoding (in the US, it is ASCI
 
 In the library [`Data.Text.Encoding`](http://hackage.haskell.org/package/text-1.1.1.3/docs/Data-Text-Encoding.html) there is a function
 
+```Haskell
     decodeUtf8 :: ByteString -> Text
+```
 where it decodes a `ByteString` that contains `utf8` encoded text.
 Similarly, there are many ways to convert between `Text` and `ByteString`.
 In the same library, [`Data.Text.Encoding`](http://hackage.haskell.org/package/text-1.1.1.3/docs/Data-Text-Encoding.html) there is a function
 
+```Haskell
     encodeUtf8 :: Text -> ByteString
+```
 where it encodes text that uses `utf8` encoding into a `ByteString`.
 
 In C++, this type of conversion from unicode `string` to ASCII `string` isn’t as simple as Haskell’s.
 In C++, to convert between a ASCII `string` and unicode `string`, we use `converter`. Include `string`, `locale`, and `codecvt`.:
 
+```C++
     std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
     const std::wstring wide_string = L"This string";
     const std::string u_string = converter.to_bytes(wide_string);
+```
 
 The variable `u_string` will contain `This string` as an ASCII string.
 
