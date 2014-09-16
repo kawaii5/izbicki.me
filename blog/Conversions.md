@@ -82,7 +82,7 @@ To convert to or from any type of unicode character (in both Haskell and C++), t
 
 ---
 ###Extra: C++ Conversions `wstring` vs. `utf8`
-`wstring` is a `string` in which is character is 16-bits long, twice as long as a `string` character. `utf8` can store 8-bit characters; it is also "capable of encoding all possible characters in Unicode". [See Wiki article](http://en.wikipedia.org/wiki/UTF-8).
+`wstring` is a `string` in which is character is 16-bits long, twice as long as a `string` character. `utf8` can store 8-bit characters; it is also "capable of encoding all possible characters in Unicode" [(See Wiki article)](http://en.wikipedia.org/wiki/UTF-8).
 
 Include the libraries `codecvt` and `string`.
 ([Click here for more information](http://stackoverflow.com/questions/4358870/convert-wstring-to-string-encoded-in-utf-8)).
