@@ -16,7 +16,7 @@ On the other hand, Haskell has a clean and simple way of converting and storing 
 
 This table shows the differences from converting from ByteString to UTF8 in Haskell and wstring and UTF8 in C++.
 Haskell | C++
------------------------
+---------|--------------
 decodeUTF8 “unicode ByteString to UTF8” | // convert wstring to UTF-8 string
     | std::string wstring_to_utf8 (const std::wstring& str)
     | {
