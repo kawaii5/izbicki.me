@@ -16,6 +16,10 @@ On the other hand, Haskell has a clean and simple way of converting and storing 
 
 This table shows the differences from converting from ByteString to UTF8 in Haskell and wstring and UTF8 in C++.
 <table>
+  <tr>
+    <td>Haskell</td>
+    <td>C++</td>
+  </tr>
 <tr>
 <td><pre>
    ```Haskell
