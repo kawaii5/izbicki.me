@@ -50,10 +50,12 @@ Next, we will look at a more complicated conversion, between `ByteString` and `T
 
 ---
 ###`ByteString` to `Text` Conversions
-In Haskell, there are several ways to convert from `ByteString` to `Text` because of the different types of unicode encodings. There are many types of unicode because of the vast amount of characters. People in Russia use a different default encoding than the encoding we use in US (which is usually ASCII). We need different types of encoding to encode different types of characters, even if coming from different countries. If we used the ASCII encoding on the Russian language, it will output gibberish.
+In Haskell, there are several ways to convert from `ByteString` to `Text` because of the different types of unicode encodings. There are many types of unicode because of the vast amount of characters. People in Russia use a different default encoding than the encoding we use in US (which is usually ASCII). We need different types of encoding to encode different types of characters, even if coming from different countries. If we used the ASCII encoding on the Russian language, it would output gibberish.
 
-I'm going to take some time here to explain about Unicode encodings.
+I'm going to take some time here to explain Unicode encodings.
+
 Quick Reminder: A string stores 8-bit characters.
+
 Now, each character in a string uses the default encoding (in the US, it is ASCII) which tells the program how to encode the character. There are many different types of encoding that can be stored within data types such as `wstring`, `utf8` in C++ and `ByteString` and `Text` in Haskell. Within these types, characters can be longer, or shorter than 8-bits. `ByteString` stores characters with the same bit length, otherwise it may not be encoded correctly (this is the same with `wstring` and `utf8`). However, `Text` stores characters with varying length. `Text` knows what kind of encoding each character has when it is stored whereas `ByteString` doesn't. 
 
 In the library [`Data.Text.Encoding`](http://hackage.haskell.org/package/text-1.1.1.3/docs/Data-Text-Encoding.html) there is a function
@@ -85,7 +87,7 @@ To convert to or from any type of unicode character (in both Haskell and C++), t
 
 ---
 ###Extra: C++ Conversions `wstring` vs. `utf8`
-`wstring` is a `string` in which is character is 16-bits long, twice as long as a `string` character. `utf8` can store 8-bit characters; it is also "capable of encoding all possible characters in Unicode" [(See Wiki article)](http://en.wikipedia.org/wiki/UTF-8).
+`wstring` is a type of `string` in which each character is 16-bits long, twice as long as a standard `string` character. `utf8` can store 8-bit characters; it is also "capable of encoding all possible characters in Unicode" [(See Wiki article)](http://en.wikipedia.org/wiki/UTF-8).
 
 Include the libraries `codecvt` and `string`.
 ([Click here for more information](http://stackoverflow.com/questions/4358870/convert-wstring-to-string-encoded-in-utf-8)).
