@@ -25,7 +25,7 @@ Programming languages have many different ways to store characters, like a strin
 
 Later, I will show you how to convert a `String` into a `ByteString` so you can use this function.
 
-For C++ users, it is as if you are converting between a `list<char>` (`String` in Haskell), ASCII `string` or `char*` (`ByteString` in Haskell), and `wstring` (`Text` in Haskell). Just as `list<char>` does not necessarily store characters adjacently in C++, the `[Char]`, or `String`, types do not necessarily store characters adjacently in Haskell. Similarly, `string`, or `char*`, stores characters adjacently in C++ just like Haskell's `ByteString`. However, there are other variable types like `wstring` that can hold other types of encoding. `wstring` can store 16-bits in each character slot, instead of the standard 8-bit. This is similar to Haskell’s `Text`, but `Text` can take any type of encoding such as ASCII or UTF16 (a type that stores unicode characters). C++ does not have a variable type specifically for unicode, but there are types that can store unicode characters such as `wstring` and `utf8`. C++ has a library by IBM called [`ICU`](http://site.icu-project.org/) which can take all types of encodings.
+For C++ users, it is as if you are converting between a `list<char>` (`String` in Haskell), ASCII `string` or `char*` (`ByteString` in Haskell), and `wstring` (`Text` in Haskell). Just as `list<char>` does not necessarily store characters adjacently in C++, the `[Char]`, or `String`, types do not necessarily store characters adjacently in Haskell. Similarly, `string`, or `char*`, stores characters adjacently in C++ just like Haskell's `ByteString`. However, there are other variable types like `wstring` that can hold other types of encoding. `wstring` can store 16-bits in each character slot, instead of the standard 8-bit. This is similar to Haskell’s `Text`, but `Text` can take any type of encoding such as ASCII or UTF16 (a type that stores unicode characters). C++ does not have a variable type specifically for unicode, but there are types that can store unicode characters such as `wstring` and `utf8`. In addition, C++ has a library by IBM called [`ICU`](http://site.icu-project.org/) which can take all types of encodings.
 
 First, we will look at a simple conversion, between `ByteString` and `String`.
 
@@ -43,24 +43,9 @@ and to do the reverse, `ByteString` to `String`:
     unpack :: ByteString -> String
 ```
 
+This conversion between `ByteString` and `String` in Haskell is similar to converting between `char*` and `list<char>` in C++. However, there is no simple conversion between these types. I would have to iterate through the `char*` (or `string`) to convert it into a `list<char>`. I would also have to iterate through the `list<char>` to convert it to a `string` or `char*`.
 
-This conversion between `ByteString` and `String` in Haskell is similar to converting between `char*` and `string` in C++.
-
-In C++, to convert from `char*` to `string`, we would use the built in string constructor that takes in a `char*`. Include the libraries `sstream` and `string`.:
-
-```C++
-    char* str = "hello";
-    string str2(str);
-```
-
-In C++, to convert from `string` to `char*`, you would use `c_str()`,
-
-```C++
-    string s = "apple";
-    char* c_arr = s.c_str();
-```
-
-Both C++ and Haskell take one line to convert between these two types of variables (after declaring the variable). These are both simplistic and look easy to use. The functions are clear and concise on their usage.
+Haskell has a very straightforward approach to this conversion than C++. Haskell has only a line of code, while C++ would have several, to iterate through the `char*`, `string`, or `list<char>`.
 Next, we will look at a more complicated conversion, between `ByteString` and `Text`.
 
 ---
