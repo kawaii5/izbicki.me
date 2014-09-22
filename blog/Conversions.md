@@ -24,8 +24,11 @@ This table shows the differences from converting from ByteString to UTF8 in Hask
                                         | return myconv.to_bytes(str); |
                                         | } |
 
-| Haskell | C++          |
-| ------------- | ----------- |
-| decodeUTF8 “unicode ByteString to UTF8”      | // convert wstring to UTF-8 string|
-| Close     | std::string wstring_to_utf8 (const std::wstring& str)    |
-| | { |
+| Haskell                                      | C++                                                      |
+| -------------------------------------------- | ---------------------------------                        |
+| decodeUTF8 “unicode ByteString to UTF8”      | // convert wstring to UTF-8 string                       |
+|                                              | std::string wstring_to_utf8 (const std::wstring& str)    |
+|                                              | {                                                        |
+|                                              | std::wstring_convert<std::codecvt_utf8<wchar_t>> myconv; |
+|                                              | return myconv.to_bytes(str);                             |
+|                                              | }                                                        |
