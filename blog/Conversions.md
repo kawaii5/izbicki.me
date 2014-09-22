@@ -16,14 +16,14 @@ On the other hand, Haskell has a clean and simple way of converting and storing 
 
 This table shows the differences from converting from ByteString to UTF8 in Haskell and wstring and UTF8 in C++.
 <table>
-  <tr>
-    <td>Haskell</td>
-    <td>C++</td>
-  </tr>
+<tr>
+<td>Haskell</td>
+<td>C++</td>
+</tr>
 <tr>
 <td><pre>
    ```Haskell
-   decodeUTF8 "unicode ByteString to UTF8"`
+   decodeUTF8 "unicode ByteString to UTF8"
    ```
 </td></pre>
 <td><pre>
@@ -34,6 +34,36 @@ This table shows the differences from converting from ByteString to UTF8 in Hask
       std::wstring_convert<std::codecvt_utf8<wchar_t>> myconv;
       return myconv.to_bytes(str);
    }
+
+   const std::wstring wide_string = L"This string";
+   const std::string u_string = wstring_to_utf8(wide_string);
+   ```
+</td></pre>
+</tr>
+
+Heres the table from converting from UTF8 to ByteString in Haskell and UTF8 and wstring in C++.
+<table>
+<tr>
+<td>Haskell</td>
+<td>C++</td>
+</tr>
+<tr>
+<td><pre>
+   ```Haskell
+   encodeUTF8 "unicode UTF8 to ByteString"
+   ```
+</td></pre>
+<td><pre>
+   ```C++
+   // convert UTF-8 string to wstring
+   std::wstring utf8_to_wstring (const std::string& str)
+   {
+      std::wstring_convert<std::codecvt_utf8<wchar_t>> myconv;
+      return myconv.from_bytes(str);
+   }
+
+   const std::string u_string = "This string";
+   const std::wstring wide_string = utf8_to_wstring(u_string);
    ```
 </td></pre>
 </tr>
