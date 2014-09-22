@@ -23,3 +23,8 @@ This table shows the differences from converting from ByteString to UTF8 in Hask
                                         | std::wstring_convert<std::codecvt_utf8<wchar_t>> myconv; |
                                         | return myconv.to_bytes(str); |
                                         | } |
+
+| Name | Description          |
+| ------------- | ----------- |
+| Help      | ~~Display the~~ help window.|
+| Close     | _Closes_ a window     |
