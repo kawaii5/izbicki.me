@@ -19,7 +19,7 @@ This table shows the differences from converting from ByteString to UTF8 in Hask
 <tr>
 <td><pre>
    ```Haskell
-   decodeUTF8 “unicode ByteString to UTF8”`
+   decodeUTF8 "unicode ByteString to UTF8"`
    ```
 </td></pre>
 <td><pre>
