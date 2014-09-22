@@ -20,7 +20,7 @@ This table shows the differences from converting from ByteString to UTF8 in Hask
 <td><pre>
    `decodeUTF8 “unicode ByteString to UTF8”`
 </td></pre>
-< <td align="left">><pre>
+<td align="left"><pre>
     ```C++
     // convert wstring to UTF-8 string
     std::string wstring_to_utf8 (const std::wstring& str)
