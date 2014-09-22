@@ -1,15 +1,16 @@
 #Conversions Between Character Strings in Haskell vs. C++
 
 ##Understanding Return Types in Haskell vs. C++
-I found `:t` fascinating when learning Haskell. This command explains how to use a function by showing what types it uses. For example, `show` converts types into `String`:
+I found `:t` fascinating when learning Haskell. This command explains how to use a function by showing what types it uses.
 
 ```Haskell
     ghci> :t show
     show :: Show a => a -> String
 ```
-    
+In the above example, `:t` explains how `show` works. It's format is `Show a` and then it takes in a variable `a` and outputs a `String`. `:t` tells me what kinds of types each function takes. However, there are types which output similar values but are stored as different types such as `String`, `ByteString`, and `Text` (in Haskell).
+
 ---
-Programming languages have many different ways to store characters, like a string. Haskell can store characters in `String`, `ByteString` and `Text`. Converting between a `String`, `ByteString`, and `Text` is important because functions ask for different types. For example, `writeBS :: ByteString -> Snap ()` asks for `ByteString`. If we put any other way of storing characters, like a `String`, there will be an error message.
+Programming languages have many different ways to store characters, like a string. Haskell can store characters in `String`, `ByteString` and `Text`. Converting between a `String`, `ByteString`, and `Text` is important because functions ask for different types. For example, `writeBS :: ByteString -> Snap ()` asks for a `ByteString`. If we use any other way of storing characters, like a `String`, there will be an error message such as in the example below.
 
 ```Haskell
     ghci> writeBS "hello"
@@ -23,10 +24,8 @@ Programming languages have many different ways to store characters, like a strin
 ```
 
 Later, I will show you how to convert a `String` into a `ByteString` so you can use this function.
-(For C++ users, it is as if you are converting between a `list<char>`, ASCII `string` or `char*`, and `wstring` respectively. `list<char>` does not necessarily store characters adjacently, like the `[Char]`, or `String` in Haskell. `string` or `char*` stores characters adjacently like Haskell's `ByteString`. `wstring` can hold encodings other than ASCII like Haskell's `Text`. However, `Text` can take any type of encoding, but `wstring` takes UTF16. The [`ICU`](http://site.icu-project.org/) provides a way to store characters the way `Text` does in Haskell.)
 
-For C++, `string` uses ASCII encoding. However, there are other variable types like `wstring` that can hold other types of encoding. `wstring` can store 16-bits in each character slot, instead of the standard 8-bit. This is similar to Haskell’s `Text`, but `Text` can take any type of encoding.
-C++ does not have a variable type specifically for unicode, but there are types that can store unicode characters such as `wstring` and `utf8`. C++ has a library by IBM called [`ICU`](http://site.icu-project.org/) which can take all types of encodings.
+For C++ users, it is as if you are converting between a `list<char>` (`String` in Haskell), ASCII `string` or `char*` (`ByteString` in Haskell), and `wstring` (`Text` in Haskell). Just as `list<char>` does not necessarily store characters adjacently in C++, the `[Char]`, or `String`, types do not necessarily store characters adjacently in Haskell. Similarly, `string`, or `char*`, stores characters adjacently in C++ just like Haskell's `ByteString`. However, there are other variable types like `wstring` that can hold other types of encoding. `wstring` can store 16-bits in each character slot, instead of the standard 8-bit. This is similar to Haskell’s `Text`, but `Text` can take any type of encoding such as ASCII or UTF16 (a type that stores unicode characters). C++ does not have a variable type specifically for unicode, but there are types that can store unicode characters such as `wstring` and `utf8`. C++ has a library by IBM called [`ICU`](http://site.icu-project.org/) which can take all types of encodings.
 
 First, we will look at a simple conversion, between `ByteString` and `String`.
 
