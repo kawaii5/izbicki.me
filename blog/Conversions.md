@@ -40,7 +40,6 @@ This table shows the differences from converting from ByteString to UTF8 in Hask
    ```
 </td></pre>
 </tr>
-</table>
 
 Heres the table from converting from UTF8 to ByteString in Haskell and UTF8 and wstring in C++.
 <table>
@@ -68,4 +67,3 @@ Heres the table from converting from UTF8 to ByteString in Haskell and UTF8 and 
    ```
 </td></pre>
 </tr>
-</table>
