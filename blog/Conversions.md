@@ -15,34 +15,19 @@ C++ does not have a simple, good way to store and convert unicode characters. Ho
 On the other hand, Haskell has a clean and simple way of converting and storing unicode characters. Haskell uses one library, [`Data.Text.Encoding`](http://hackage.haskell.org/package/text-1.1.1.3/docs/Data-Text-Encoding.html).
 
 This table shows the differences from converting from ByteString to UTF8 in Haskell and wstring and UTF8 in C++.
-
-| Haskell                                      | C++                                                        |
-| -------------------------------------------- | ---------------------------------                          |
-| `decodeUTF8 “unicode ByteString to UTF8”`    | ``` C++
-                                                     // convert wstring to UTF-8 string                       
-                                                     std::string wstring_to_utf8 (const std::wstring& str)            
-                                                     {                                                       
-                                                         std::wstring_convert<std::codecvt_utf8<wchar_t>> myconv;
-                                                         return myconv.to_bytes(str);                       
-                                                     }
-                                                 ```                              
 <table>
 <tr>
 <td>
-   ```csharp
-   const int x = 3;
-   const string y = "foo";
-   readonly Object obj = getObject();
-   ```
+   `decodeUTF8 “unicode ByteString to UTF8”`
 </td>
 <td>
-  ```nemerle
-  def x : int = 3;
-  def y : string = "foo";
-  def obj : Object = getObject();
-  ```
-</td>
-<td>
-  Variables defined with <code>def</code> cannot be changed once defined. This is similar to <code>readonly</code> or <code>const</code> in C# or <code>final</code> in Java. Most variables in Nemerle aren't explicitly typed like this.
+    ```C++
+    // convert wstring to UTF-8 string
+    std::string wstring_to_utf8 (const std::wstring& str)
+    {
+        std::wstring_convert<std::codecvt_utf8<wchar_t>> myconv;
+        return myconv.to_bytes(str);
+    }
+    ```
 </td>
 </tr>
