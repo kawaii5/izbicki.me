@@ -6,11 +6,11 @@ As you know, there are many different languages, characters, and symbols. Progra
 
 The way a program encodes characters is very important. In 2004, a bug was discovered in some Microsoft Windows applications. When a user typed in “Bush hid the facts” in a Notepad document, saved, closed and then reopened the same file, nonsensical words “畂桳栠摩琠敨映捡獴” would be displayed in place of “Bush hid the facts”. The ASCII characters “Bush hid the facts” were encoded as UTF-16 characters. [(Read more)](http://en.wikipedia.org/wiki/Bush_hid_the_facts).
 
-##Converting from One Encoding to Another
-
 I will focus on two programming language to compare their differences in the way they convert from one encoding to another: Haskell and C++.
 
-C++ does not have a simple, good way to store and convert unicode characters. However, people have found ways using `string` and `wstring`. C++ uses multiple libraries, `codecvt` and `string`.
+##Converting from One Encoding to Another
+
+C++ does not have a simple, good way to store and convert unicode characters. However, people have found ways using `string` and `wstring`. `wstring` is fixed-length and uses 16-bit code units. It uses the encoding called UCS-2, it is a similar to UTF-16. C++ uses multiple libraries, `codecvt` and `string`. [(Read more)](http://stackoverflow.com/questions/4358870/convert-wstring-to-string-encoded-in-utf-8).
 
 On the other hand, Haskell has a clean and simple way of converting and storing unicode characters. Haskell uses one library, [`Data.Text.Encoding`](http://hackage.haskell.org/package/text-1.1.1.3/docs/Data-Text-Encoding.html).
 
@@ -60,3 +60,6 @@ const std::string u_string = "This string";
 const std::wstring wide_string = utf8_to_wstring(u_string);
 </td></pre>
 </tr>
+
+##Conclusion
+I think that converting in Haskell is cleaner, simpler, and straightforward. C++ does not have a clear encoding variable for unicode, but Haskell takes care of each type of encoding type.
