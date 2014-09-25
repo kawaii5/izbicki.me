@@ -22,12 +22,9 @@ This table shows the differences from converting from ByteString to UTF8 in Hask
 </tr>
 <tr>
 <td><pre>
-   ```
    decodeUTF8 "unicode ByteString to UTF8"
-   ```
 </td></pre>
 <td><pre>
-   ```C++
    // convert wstring to UTF-8 string
    std::string wstring_to_utf8 (const std::wstring& str)
    {
@@ -37,7 +34,6 @@ This table shows the differences from converting from ByteString to UTF8 in Hask
 
    const std::wstring wide_string = L"This string";
    const std::string u_string = wstring_to_utf8(wide_string);
-   ```
 </td></pre>
 </tr>
 </table>
@@ -50,12 +46,9 @@ Heres the table from converting from UTF8 to ByteString in Haskell and UTF8 and 
 </tr>
 <tr>
 <td><pre>
-   ```
    encodeUTF8 "unicode UTF8 to ByteString"
-   ```
 </td></pre>
 <td><pre>
-   ```
    // convert UTF-8 string to wstring
    std::wstring utf8_to_wstring (const std::string& str)
    {
@@ -65,6 +58,5 @@ Heres the table from converting from UTF8 to ByteString in Haskell and UTF8 and 
 
    const std::string u_string = "This string";
    const std::wstring wide_string = utf8_to_wstring(u_string);
-   ```
 </td></pre>
 </tr>
