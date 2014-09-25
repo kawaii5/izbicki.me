@@ -32,8 +32,10 @@ std::wstring_convert<std::codecvt_utf8<wchar_t>> myconv;
 return myconv.to_bytes(str);
 }
 
-const std::wstring wide_string = L"This string";
-const std::string u_string = wstring_to_utf8(wide_string);
+const std::wstring wide_string
+   = L"This string";
+const std::string u_string
+   = wstring_to_utf8(wide_string);
 </td></pre>
 </tr>
 </table>
@@ -56,8 +58,10 @@ std::wstring_convert<std::codecvt_utf8<wchar_t>> myconv;
 return myconv.from_bytes(str);
 }
    
-const std::string u_string = "This string";
-const std::wstring wide_string = utf8_to_wstring(u_string);
+const std::string u_string
+   = "This string";
+const std::wstring wide_string
+   = utf8_to_wstring(u_string);
 </td></pre>
 </tr>
 </table>
