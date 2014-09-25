@@ -49,14 +49,14 @@ Heres the table from converting from UTF8 to ByteString in Haskell and UTF8 and 
    encodeUTF8 "unicode UTF8 to ByteString"
 </td></pre>
 <td><pre>
-       // convert UTF-8 string to wstring
-       std::wstring utf8_to_wstring (const std::string& str)
-       {
-          std::wstring_convert<std::codecvt_utf8<wchar_t>> myconv;
-          return myconv.from_bytes(str);
-       }
+// convert UTF-8 string to wstring
+std::wstring utf8_to_wstring (const std::string& str)
+{
+std::wstring_convert<std::codecvt_utf8<wchar_t>> myconv;
+return myconv.from_bytes(str);
+}
    
-       const std::string u_string = "This string";
-       const std::wstring wide_string = utf8_to_wstring(u_string);
+const std::string u_string = "This string";
+const std::wstring wide_string = utf8_to_wstring(u_string);
 </td></pre>
 </tr>
