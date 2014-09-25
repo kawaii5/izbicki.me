@@ -22,7 +22,7 @@ This table shows the differences from converting from ByteString to UTF8 in Hask
 </tr>
 <tr>
 <td><pre>
-decodeUTF8 "unicode ByteString to UTF8"
+decodeUtf8 "unicode ByteString to UTF8"
 </td></pre>
 <td><pre>
 // convert wstring to UTF-8 string
@@ -46,7 +46,7 @@ Heres the table from converting from UTF8 to ByteString in Haskell and UTF8 and 
 </tr>
 <tr>
 <td><pre>
-encodeUTF8 "unicode UTF8 to ByteString"
+encodeUtf8 "unicode UTF8 to ByteString"
 </td></pre>
 <td><pre>
 // convert UTF-8 string to wstring
