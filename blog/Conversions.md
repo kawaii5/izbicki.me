@@ -60,6 +60,7 @@ const std::string u_string = "This string";
 const std::wstring wide_string = utf8_to_wstring(u_string);
 </td></pre>
 </tr>
+</table>
 
 ##Conclusion
 I think that converting in Haskell is cleaner, simpler, and straightforward. C++ does not have a clear encoding variable for unicode, but Haskell takes care of each type of encoding type.
