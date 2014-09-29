@@ -14,7 +14,7 @@ C++ does not have an easy way to store and convert unicode characters. However, 
 
 On the other hand, Haskell has a clean and simple way of converting and storing unicode characters. Haskell uses one library, [`Data.Text.Encoding`](http://hackage.haskell.org/package/text-1.1.1.3/docs/Data-Text-Encoding.html) to do these conversions.
 
-This table shows the differences from converting from `ByteString` to UTF-8 `Text` in Haskell and `wstring` and UTF-8 `string` in C++. For Haskell, import [Data.ByteString](https://hackage.haskell.org/package/bytestring-0.9.2.1/docs/Data-ByteString.html).
+This table shows the differences from converting from `ByteString` to UTF-8 `Text` in Haskell and `wstring` and UTF-8 `string` in C++. For Haskell, import [`Data.ByteString`](https://hackage.haskell.org/package/bytestring-0.9.2.1/docs/Data-ByteString.html).
 <table>
 <tr>
 <td>Haskell</td>
@@ -40,7 +40,7 @@ const std::string u_string
 </tr>
 </table>
 
-Heres the table from converting from UTF-8 `Text` to `ByteString` in Haskell and UTF-8 `string` and `wstring` in C++. For Haskell, import [Data.Text](http://hackage.haskell.org/package/text-0.11.2.0/docs/Data-Text.html).
+Heres the table from converting from UTF-8 `Text` to `ByteString` in Haskell and UTF-8 `string` and `wstring` in C++. For Haskell, import [`Data.Text`](http://hackage.haskell.org/package/text-0.11.2.0/docs/Data-Text.html).
 <table>
 <tr>
 <td>Haskell</td>
