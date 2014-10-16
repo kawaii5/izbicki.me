@@ -10,7 +10,7 @@ I will focus on two programming language to compare their differences in the way
 
 ##Converting from One Encoding to Another
 
-C++ does not have an easy way to store and convert unicode characters. However, people have found workarounds using `string` and `wstring`. `wstring` is fixed-length and uses 16-bit code units and an encoding called UCS-2, which is similar to UTF-16. To do these conversions in C++, you should use `codecvt` and `string` libraries. [(Read more)](http://stackoverflow.com/questions/4358870/convert-wstring-to-string-encoded-in-utf-8).
+C++ does not have an easy way to store and convert unicode characters. However, people have found workarounds using `string` and `wstring`. `wstring` is fixed-length and uses 16-bit code units and an encoding called UCS-2, which is similar to UTF-16. The UCS-2 uses a fixed-length format rather than the variable length format. This means that each character is exactly 2-bytes long. Some mistaken UCS-2 as UTF-16 [(Read more)](http://en.wikipedia.org/wiki/Universal_Character_Set). To do these conversions in C++, you should use `codecvt` and `string` libraries. [(Read more)](http://stackoverflow.com/questions/4358870/convert-wstring-to-string-encoded-in-utf-8).
 
 On the other hand, Haskell has a clean and simple way of converting and storing unicode characters. Haskell uses one library, [`Data.Text.Encoding`](http://hackage.haskell.org/package/text-1.1.1.3/docs/Data-Text-Encoding.html) to do these conversions.
 
