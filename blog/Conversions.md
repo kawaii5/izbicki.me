@@ -22,7 +22,7 @@ To do these conversions in C++, you should use [`codecvt`](http://www.cplusplus.
 
 On the other hand, Haskell has a clean and simple way of converting and storing unicode characters. Haskell uses one library, [`Data.Text.Encoding`](http://hackage.haskell.org/package/text-1.1.1.3/docs/Data-Text-Encoding.html) to do these conversions.
 
-This table shows the differences from converting from `ByteString` to UTF-8 `Text` in Haskell and `wstring` and UTF-8 `string` in C++. For Haskell, import [`Data.ByteString`](https://hackage.haskell.org/package/bytestring-0.9.2.1/docs/Data-ByteString.html).
+This table shows the differences from converting from [`ByteString`](https://hackage.haskell.org/package/bytestring) to UTF-8 [`Text`](https://hackage.haskell.org/package/text) in Haskell and `wstring` and UTF-8 `string` in C++. For Haskell, import [`Data.ByteString`](https://hackage.haskell.org/package/bytestring-0.9.2.1/docs/Data-ByteString.html).
 <table>
 <tr>
 <td>Haskell</td>
