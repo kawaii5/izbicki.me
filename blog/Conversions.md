@@ -30,8 +30,8 @@ decodeUtf8 "unicode ByteString to UTF8"
 </td></pre>
 <td><pre>
 // convert wstring to UTF-8 string
-std::wstring_convert<std::codecvt_utf8<char32_t>,char32_t> cv;
-cv.to_bytes(L"This string");
+std::wstring_convert> myconv;
+myconv.to_bytes(L"This string");
 </td></pre>
 </tr>
 </table>
@@ -55,4 +55,4 @@ myconv.from_bytes("This string");
 </table>
 
 ##Conclusion
-I think that converting in Haskell is cleaner as it has a built-in function. C++ does not have a clear encoding variable for unicode, but Haskell takes care of each type of encoding type. Instead, C++ uses a template. However, conversions can be advantageous in a template because then it can convert between string types easily.
+I think that converting in Haskell is cleaner as it has a built-in function. C++ does not have a clear encoding variable for unicode, but Haskell takes care of each type of encoding type. Instead, C++ uses a template. However, conversions can be advantageous in a template because then it can convert between string types easily. The C++ functions are based on the same format, using "`wstring_convert`..."
