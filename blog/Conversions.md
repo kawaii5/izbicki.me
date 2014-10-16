@@ -6,6 +6,8 @@ There are many different languages, characters, and symbols that are used. Progr
 
 The way a program encodes characters is very important. In 2004, a bug was discovered in some Microsoft Windows applications. When a user typed in “Bush hid the facts” in a Notepad document, saved, closed and then reopened the same file, nonsensical words “畂桳栠摩琠敨映捡獴” would be displayed in place of “Bush hid the facts”. The ASCII characters “Bush hid the facts” were encoded as UTF-16 characters. [(Read more)](http://en.wikipedia.org/wiki/Bush_hid_the_facts).
 
+Converting between string-types is important in each coding language. If I put a UTF-16 encoded string in a function that accepted UTF-8 encoded strings, the string may be treated incorrectly or cannot be dealt with.
+
 I will focus on two programming language to compare their differences in the way they convert from one encoding to another: Haskell and C++.
 
 ##Converting from One Encoding to Another
