@@ -64,4 +64,4 @@ myconv.from_bytes("This string");
 </table>
 
 ##Conclusion
-I think that converting in Haskell is cleaner as it has a built-in function. C++ does not have a clear encoding variable for unicode, but Haskell takes care of each type of encoding type. Instead, C++ uses a template. However, conversions can be advantageous in a template because then it can convert between string types easily. The C++ functions are based on the same format, using "`wstring_convert`..." and it is able to convert between a UCS-2 encoded string to a UTF-8 encoded string and back.
+I think that converting in Haskell is cleaner as it has a built-in function. C++ does not have a clear encoding variable or function for Unicode, but Haskell takes care of each type of encoding type. Instead, C++ uses a template. However, conversions can be advantageous in a template because then it can convert between string types easily. The C++ functions are based on the same format, using "`wstring_convert`..." and it is able to convert between a UCS-2 encoded string to a UTF-8 encoded string and back.
