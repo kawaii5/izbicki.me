@@ -16,7 +16,7 @@ C++ does not have an easy way to store and convert Unicode characters. However, 
 
 The UCS-2 uses a fixed-length format rather than the variable length format. This means that each character is exactly 2-bytes long. Some mistaken UCS-2 as UTF-16 [(Read more)](http://en.wikipedia.org/wiki/Universal_Character_Set).
 
-The `string` class is able to handle variable-length and multi-byte characters(more than one byte $|$ 8-bits) if encoding is used (such as UTF-8 or UTF-16).
+The `string` class is able to handle variable-length and multi-byte characters(more than one byte -- 8-bits) if encoding is used (such as UTF-8 or UTF-16).
 
 To do these conversions in C++, you should use [`codecvt`](http://www.cplusplus.com/reference/locale/codecvt/?kw=codecvt) and `string` libraries. [(Read more)](http://stackoverflow.com/questions/4358870/convert-wstring-to-string-encoded-in-utf-8).
 
