@@ -1,6 +1,6 @@
 #Converting Character Encodings in Haskell vs. C++
 
-There are many different languages, characters, and symbols that are used. Programs need to be able to correctly store and display these characters. This is done by the use of different encodings such as ASCII and unicode. While Americans usually use [ASCII](http://www.asciitable.com/) to decode their characters, there is another type of encoding called unicode which stores other types of characters. Two common examples of unicode are UTF-8 and UTF-16.
+There are many different languages, characters, and symbols that are used. Programs need to be able to correctly store and display these characters. This is done by the use of different encodings such as ASCII and Unicode. While Americans usually use [ASCII](http://www.asciitable.com/) to decode their characters, there is another type of encoding called Unicode which stores other types of characters. Two common examples of Unicode are UTF-8 and UTF-16.
 
 [UTF-8](http://en.wikipedia.org/wiki/UTF-8) and [UTF-16](http://en.wikipedia.org/wiki/UTF-16) are both types of character encodings that are capable of encoding all possible characters and are variable-length. [Variable-length](http://en.wikipedia.org/wiki/Variable-width_encoding) encoding is a type of character encoding where codes of different lengths are used to encode a character set to display. However, UTF-8 encoding uses 8-bit code units, whereas UTF-16 encoding uses one or two 16-bit code units.
 
@@ -12,7 +12,7 @@ I will focus on two programming language to compare their differences in the way
 
 ##Converting from One Encoding to Another
 
-C++ does not have an easy way to store and convert unicode characters. However, people have found workarounds using [`string`](http://www.cplusplus.com/reference/string/string/) and [`wstring`](http://www.cplusplus.com/reference/string/wstring/?kw=wstring). `wstring` is fixed-length and uses 16-bit code units and an encoding called UCS-2, which is similar to UTF-16. 
+C++ does not have an easy way to store and convert Unicode characters. However, people have found workarounds using [`string`](http://www.cplusplus.com/reference/string/string/) and [`wstring`](http://www.cplusplus.com/reference/string/wstring/?kw=wstring). `wstring` is fixed-length and uses 16-bit code units and an encoding called UCS-2, which is similar to UTF-16. 
 
 The UCS-2 uses a fixed-length format rather than the variable length format. This means that each character is exactly 2-bytes long. Some mistaken UCS-2 as UTF-16 [(Read more)](http://en.wikipedia.org/wiki/Universal_Character_Set).
 
@@ -23,6 +23,11 @@ To do these conversions in C++, you should use [`codecvt`](http://www.cplusplus.
 On the other hand, Haskell has a clean and simple way of converting and storing unicode characters. Haskell uses one library, [`Data.Text.Encoding`](http://hackage.haskell.org/package/text-1.1.1.3/docs/Data-Text-Encoding.html) to do these conversions.
 
 This table shows the differences from converting from [`ByteString`](https://hackage.haskell.org/package/bytestring) to UTF-8 [`Text`](https://hackage.haskell.org/package/text) in Haskell and `wstring` and UTF-8 `string` in C++. For Haskell, import [`Data.ByteString`](https://hackage.haskell.org/package/bytestring-0.9.2.1/docs/Data-ByteString.html).
+
+`ByteString` represents a sequence of bytes or 8-bit characters. It does not support Unicode.
+
+`Text` representes Unicode character strings that may be variable-length.
+
 <table>
 <tr>
 <td>Haskell</td>
